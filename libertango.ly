@@ -5,6 +5,7 @@
     title = "Libertango"
     tagline = ""
 }
+#(ly:set-option 'point-and-click #f)
 #(set-global-staff-size 19)
 #(set-default-paper-size "a4")
 global = { 
@@ -30,8 +31,8 @@ globalTempo = {
                 \new Voice \globalTempo
 
                 \context Voice = "voice 1" {
-                    \autoBeamOff
-                    ccidentalStyle "modern-voice-cautionary"
+%                    \autoBeamOff
+                    \accidentalStyle "modern-voice-cautionary"
                     \override Voice.TextScript #'padding = #2.0
                     \override MultiMeasureRest #'expand-limit = 1
                     \once \override Staff.TimeSignature #'style = #'() 
@@ -57,8 +58,8 @@ globalTempo = {
                     e'' 4. e'' 8 ~ e'' 4 e''  |
 %% 15
                     d'' 4. d'' 8 ~ d'' 4 d''  |
-                    d'' 4. d'' 8 ~ d'' 4 d''  |
-                    d'' 1 ~  |
+                    d'' 4. d'' 8 ~ d'' 4 d''  \bar "||"
+                    d'' 1 ^\markup { \box "1" } ~ |
                     d'' 2. r4  |
                     e'' 1 ~  |
 %% 20
@@ -77,8 +78,8 @@ globalTempo = {
                     bes' 2. r4  |
                     r2. e' 4 ^\< 
                     % warning: overlong bar truncated here |
-                    a' 4. cis'' e'' 4  |
-                    a'' 1 ^\mf \! ~  |
+                    a' 4. cis'' e'' 4  \bar "||"
+                    a'' 1 ^\mf \! ~ ^\markup { \box "2" } |
                     a'' 2 g'' 8 f'' e'' d''  |
 %% 35
                     e'' 1 ~  |
@@ -96,12 +97,12 @@ globalTempo = {
                     e'' 1 ~  |
                     e'' 2 e'' 8 f'' e'' d''  |
                     e'' 1 ~  |
-                    e'' 4 r r r8 a' 16 ^\f bes'  |
-                    ees'' 1  |
+                    e'' 4 r r r8 a' 16 ^\f bes'  \bar "||"
+                    ees'' 1 ^\markup { \box "3" } |
 %% 50
-                    \key d \minor
+                    
                     c'' 4. c'' 8 ~ c'' 4 d''  |
-                    \key d \minor
+                   
                     g' 4. g' 8 ~ g' 4 g'  |
                     bes' 4. bes' 8 ~ bes' fis' g' a'  |
                     bes' 1  |
@@ -110,7 +111,7 @@ globalTempo = {
                     a' 4. a' 8 ~ a' 4 a'  |
                     a' 4. a' 8 ~ a' 4 a'  |
                     d'' 1 ~  |
-                    \key d \minor
+                  
                     d'' 1  |
                     e'' 4. e'' 8 ~ e'' 4 e''  |
 %% 60
@@ -118,9 +119,9 @@ globalTempo = {
                     e'' 1 ~  |
                     e'' 1  |
                     d'' 4. d'' 8 ~ d'' 4 d''  |
-                    d'' 4. d'' 8 ~ d'' 4 d''  |
+                    d'' 4. d'' 8 ~ d'' 4 d''  \bar "||"
 %% 65
-                    r2 r4 f'' 8 ^\p d''  |
+                    r2 ^\markup { \box "4" } r4 f'' 8 ^\p d''  |
                     r2 f'' 8 d'' r4  |
                     r2 r4 e'' 8 b'  |
                     r2 e'' 8 b' r4  |
@@ -129,7 +130,7 @@ globalTempo = {
                     r2 e'' 8 bes' r4  |
                     r2 r4 d'' 8 a'  |
                     r2 d'' 8 a' r4  |
-                    r2 r4 f'' 8 ^\f d''  |
+                    r2 ^\markup { \box "5" } r4 f'' 8 ^\f d''  |
                     r2 f'' 8 d'' r4  |
 %% 75
                     r2 r4 e'' 8 b'  |
@@ -138,11 +139,11 @@ globalTempo = {
                     r2 e'' 8 bes' r4  |
                     r2 r4 d'' 8 a'  |
 %% 80
-                    r2 d'' 8 a' r16 r a' bes'  |
-                    ees'' 1  |
-                    \key d \minor
+                    r2 d'' 8 a' r16 r a' bes'  \bar "||"
+                    ees'' 1 ^\markup { \box "6" } |
+                    
                     c'' 4. c'' 8 ~ c'' 4 d''  |
-                    \key d \minor
+                   
                     g' 4. g' 8 ~ g' 4 g'  |
                     bes' 4. bes' 8 ~ bes' fis' g' a'  |
 %% 85
@@ -152,7 +153,7 @@ globalTempo = {
                     a' 4. a' 8 ~ a' 4 a'  |
                     d'' 1 ~  |
 %% 90
-                    \key d \minor
+                  
                     d'' 1  |
                     e'' 4. e'' 8 ~ e'' 4 e''  |
                     e'' 4. e'' 8 ~ e'' 4 e''  |
@@ -160,8 +161,8 @@ globalTempo = {
                     e'' 1  |
 %% 95
                     d'' 4. d'' 8 ~ d'' 4 d''  |
-                    d'' 4. d'' 8 ~ d'' 4 d''  |
-                    r2 r4 f'' 8 d''  |
+                    d'' 4. d'' 8 ~ d'' 4 d''  \bar "||"
+                    r2 ^\markup { \box "7" } r4 f'' 8 d''  |
                     r2 f'' 8 d'' r4  |
                     r2 r4 e'' 8 b'  |
 %% 100
@@ -171,13 +172,13 @@ globalTempo = {
                     r2 r4 d'' 8 a'  |
                     r2 d'' 8 a' r4  |
 %% 105
-                    r\fermata 2 d''  |
+                    r 2 \fermata d''  |
                     \bar "|."
                 } % Voice
                 \new Lyrics \with {alignBelowContext="track 1"} \lyricsto "voice 1" \lyricmode {
                     \override LyricText #'self-alignment-X = #LEFT
                     \set ignoreMelismata = ##t
-                     _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ "А" _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ "Па" _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ "Ту" _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ "Па" _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ "Ту" _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ "Па" 
+                     "Ту" _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ "А" _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ "Па" _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ "Ту" _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ "Па" _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ "Ту" _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ "Па" 
                     \unset ignoreMelismata
                 } % Lyrics 1
             >> % Staff ends
@@ -191,8 +192,8 @@ globalTempo = {
                 \new Voice \globalTempo
 
                 \context Voice = "voice 2" {
-                    \autoBeamOff
-                    ccidentalStyle "modern-voice-cautionary"
+%                    \autoBeamOff
+                    \accidentalStyle "modern-voice-cautionary"
                     \override Voice.TextScript #'padding = #2.0
                     \override MultiMeasureRest #'expand-limit = 1
                     \once \override Staff.TimeSignature #'style = #'() 
@@ -260,9 +261,7 @@ globalTempo = {
                     e'' 4 r r r8 a' 16 ^\f bes'  |
                     g' 1  |
 %% 50
-                    \key d \minor
                     fis' 4. fis' 8 ~ fis' 4 d'  |
-                    \key d \minor
                     g' 4. g' 8 ~ g' 4 g'  |
                     bes' 4. bes' 8 ~ bes' fis' g' a'  |
                     bes' 1  |
@@ -271,7 +270,6 @@ globalTempo = {
                     a' 4. a' 8 ~ a' 4 a'  |
                     a' 4. a' 8 ~ a' 4 a'  |
                     a' 1 ~  |
-                    \key d \minor
                     a' 1  |
                     b' 4. b' 8 ~ b' 4 b'  |
 %% 60
@@ -329,13 +327,13 @@ globalTempo = {
                     r2 r4 d'' 8 a'  |
                     r2 d'' 8 a' r4  |
 %% 105
-                    r\fermata 2 d''  |
+                    r2 \fermata d''  |
                     \bar "|."
                 } % Voice
                 \new Lyrics \with {alignBelowContext="track 2"} \lyricsto "voice 2" \lyricmode {
                     \override LyricText #'self-alignment-X = #LEFT
                     \set ignoreMelismata = ##t
-                     _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ "А" _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ "Па" _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ "Ту" _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ "Па" _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ "Ту" _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ "Па" 
+                     "Ту" _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ "А" _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ "Па" _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ "Ту" _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ "Па" _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ "Ту" _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ "Па" 
                     \unset ignoreMelismata
                 } % Lyrics 1
             >> % Staff ends
@@ -349,8 +347,8 @@ globalTempo = {
                 \new Voice \globalTempo
 
                 \context Voice = "voice 3" {
-                    \autoBeamOff
-                    ccidentalStyle "modern-voice-cautionary"
+%                    \autoBeamOff
+                    \accidentalStyle "modern-voice-cautionary"
                     \override Voice.TextScript #'padding = #2.0
                     \override MultiMeasureRest #'expand-limit = 1
                     \once \override Staff.TimeSignature #'style = #'() 
@@ -418,9 +416,7 @@ globalTempo = {
                     a' 4 r r r8 a' 16 ^\f bes'  |
                     c'' 2 c'' 8 g' c'' bes'  |
 %% 50
-                    \key d \minor
                     a' 4. fis' 8 ~ fis' 4 d'  |
-                    \key d \minor
                     d' 4. d' 8 ~ d' 4 d'  |
                     d' 4. d' 8 ~ d' fis' g' a'  |
                     f' 2 f' 4 r8 b 16 c'  |
@@ -429,7 +425,6 @@ globalTempo = {
                     f' 4. f' 8 ~ f' 4 f'  |
                     cis' 8 a cis' e' a' g' f' e'  |
                     f' 1 ~  |
-                    \key d \minor
                     f' 1  |
                     aes' 4. aes' 8 ~ aes' 4 aes'  |
 %% 60
@@ -459,9 +454,7 @@ globalTempo = {
 %% 80
                     r8 f' g' f' f' f' f' g'  |
                     c'' 2 c'' 8 g' c'' bes'  |
-                    \key d \minor
                     a' 4. fis' 8 ~ fis' 4 d'  |
-                    \key d \minor
                     d' 4. d' 8 ~ d' 4 d'  |
                     d' 4. d' 8 ~ d' fis' g' a'  |
 %% 85
@@ -471,7 +464,6 @@ globalTempo = {
                     cis' 8 a cis' e' a' g' f' e'  |
                     f' 1 ~  |
 %% 90
-                    \key d \minor
                     f' 1  |
                     aes' 4. aes' 8 ~ aes' 4 aes'  |
                     aes' 4. aes' 8 ~ aes' 4 aes'  |
@@ -490,7 +482,7 @@ globalTempo = {
                     r8 f' g' f' g' f' f' f'  |
                     r8 f' g' f' f' f' f' g'  |
 %% 105
-                    r\fermata 2 f'  |
+                    r2 \fermata  f'  |
                     \bar "|."
                 } % Voice
                 \new Lyrics \with {alignBelowContext="track 3"} \lyricsto "voice 3" \lyricmode {
@@ -510,8 +502,8 @@ globalTempo = {
                 \new Voice \globalTempo
 
                 \context Voice = "voice 4" {
-                    \autoBeamOff
-                    ccidentalStyle "modern-voice-cautionary"
+%                    \autoBeamOff
+                    \accidentalStyle "modern-voice-cautionary"
                     \override Voice.TextScript #'padding = #2.0
                     \override MultiMeasureRest #'expand-limit = 1
                     \once \override Staff.TimeSignature #'style = #'() 
@@ -579,9 +571,7 @@ globalTempo = {
                     cis' 4 r r r8 a' 16 ^\f bes'  |
                     c'' 2. r8 ees' 16 d'  |
 %% 50
-                    \key d \minor
                     cis' 8 d' a' c'' bes' a' g' a'  |
-                    \key d \minor
                     bes' 1 ~  |
                     bes' 2 r  |
                     cis' 2 cis' 8 f' bes' aes'  |
@@ -590,7 +580,6 @@ globalTempo = {
                     f' 8 c' f' f' c' f' f' c'  |
                     e' 4. e' 8 ~ e' 4 e'  |
                     f' 8 d' e' f' d' f' f' d'  |
-                    \key d \minor
                     g' 4. a' 8 g' f' e' d'  |
                     d' 4. d' 8 ~ d' 4 d'  |
 %% 60
@@ -620,9 +609,7 @@ globalTempo = {
 %% 80
                     r8 d' d' d' d' d' d' d'  |
                     c'' 2. r8 ees' 16 d'  |
-                    \key d \minor
                     cis' 8 d' a' c'' bes' a' g' a'  |
-                    \key d \minor
                     bes' 1 ~  |
                     bes' 2 r  |
 %% 85
@@ -632,7 +619,6 @@ globalTempo = {
                     e' 4. e' 8 ~ e' 4 e'  |
                     f' 8 d' e' f' d' f' f' d'  |
 %% 90
-                    \key d \minor
                     g' 4. a' 8 g' f' e' d'  |
                     d' 4. d' 8 ~ d' 4 d'  |
                     d' 4. d' 8 ~ d' 4 d'  |
@@ -651,7 +637,7 @@ globalTempo = {
                     r8 d' d' d' d' d' d' d'  |
                     r8 d' d' d' d' d' d' d'  |
 %% 105
-                    r\fermata 2 f'  |
+                    r2 \fermata  f'  |
                     \bar "|."
                 } % Voice
                 \new Lyrics \with {alignBelowContext="track 4"} \lyricsto "voice 4" \lyricmode {
@@ -671,8 +657,8 @@ globalTempo = {
                 \new Voice \globalTempo
 
                 \context Voice = "voice 5" {
-                    \autoBeamOff
-                    ccidentalStyle "modern-voice-cautionary"
+%                    \autoBeamOff
+                    \accidentalStyle "modern-voice-cautionary"
                     \override Voice.TextScript #'padding = #2.0
                     \override MultiMeasureRest #'expand-limit = 1
                     \once \override Staff.TimeSignature #'style = #'() 
@@ -709,39 +695,37 @@ globalTempo = {
                     r2 r4 d' 8 a  |
                     r2 d' 8 a r4  |
 %% 25
-                    r2 r8 r d' a  |
+                    r2 r4 d'8 a  |
                     r2 d' 8 a r4  |
-                    r2. d' 8 gis  |
+                    r2 r4 d' 8 gis  |
                     r2 d' 8 gis r4  |
-                    r2. cis' 8 g  |
+                    r2 r4 cis' 8 g  |
 %% 30
                     r2 cis' 8 g r4  |
-                    r2. cis' 8 g  |
+                    r2 r4 cis' 8 g  |
                     r2 cis' 8 g r4  |
-                    r2 r8 r f' d'  |
+                    r2 r4 f' 8 d'  |
                     r2 f' 8 d' r4  |
 %% 35
-                    r2. e' 8 b  |
+                    r2 r4 e' 8 b  |
                     r2 e' 8 b r4  |
-                    r2. e' 8 bes  |
+                    r2 r4 e' 8 bes  |
                     r2 e' 8 bes r4  |
-                    r2. d' 8 a  |
+                    r2 r4 d' 8 a  |
 %% 40
                     r2 d' 8 a r4  |
-                    r2. d' 8 a  |
+                    r2 r4 d' 8 a  |
                     r2 d' 8 a r4  |
-                    r2. d' 8 gis  |
+                    r2 r4 d' 8 gis  |
                     r2 d' 8 gis r4  |
 %% 45
-                    r2. cis' 8 g  |
+                    r2 r4 cis' 8 g  |
                     r2 cis' 8 g r r  |
-                    r2. cis' 8 g  |
+                    r2 r4 cis' 8 g  |
                     r2 cis' 8 g r4  |
                     c' 8 ^\f g c' d' ees' 4 c'  |
 %% 50
-                    \key d \minor
                     fis' 4. fis' 8 ~ fis' 4 d'  |
-                    \key d \minor
                     g 4. ees' 8 ~ ees' 4 d'  |
                     g 4 g g g  |
                     f 2 bes  |
@@ -750,7 +734,6 @@ globalTempo = {
                     a 4. a 8 ~ a 4 a  |
                     e' 8 cis' e' e' cis' e' e' cis'  |
                     a 4. a 8 ~ a 4 a 8 a  |
-                    \key d \minor
                     g 8 a d' a a a a bes  |
                     r8 gis a gis a gis e' b  |
 %% 60
@@ -780,9 +763,7 @@ globalTempo = {
 %% 80
                     d' 8 a ~ a 4 ~ a d' 8 a  |
                     c' 8 g c' d' ees' 4 c'  |
-                    \key d \minor
                     fis' 4. fis' 8 ~ fis' 4 d'  |
-                    \key d \minor
                     g 4. ees' 8 ~ ees' 4 d'  |
                     g 4 g g g  |
 %% 85
@@ -792,7 +773,6 @@ globalTempo = {
                     e' 8 cis' e' e' cis' e' e' cis'  |
                     a 4. a 8 ~ a 4 a 8 a  |
 %% 90
-                    \key d \minor
                     g 8 a d' a a a a bes  |
                     r8 gis a gis a gis e' b  |
                     r8 gis a gis e' b gis a  |
@@ -803,15 +783,15 @@ globalTempo = {
                     r8 f g f d' a f g  |
                     r2 r4 f' 8 d'  |
                     r2 f' 8 d' r4  |
-                    r2. e' 8 b  |
+                    r2 r4 e' 8 b  |
 %% 100
                     r2 e' 8 b r4  |
-                    r2. e' 8 bes  |
+                    r2 r4 e' 8 bes  |
                     r2 e' 8 bes r4  |
-                    r2. d' 8 a  |
+                    r2 r4 d' 8 a  |
                     r2 d' 8 a r4  |
 %% 105
-                    r\fermata 2 a  |
+                    r2 \fermata  a  |
                     \bar "|."
                 } % Voice
                 \new Lyrics \with {alignBelowContext="track 5"} \lyricsto "voice 5" \lyricmode {
@@ -831,8 +811,8 @@ globalTempo = {
                 \new Voice \globalTempo
 
                 \context Voice = "voice 6" {
-                    \autoBeamOff
-                    ccidentalStyle "modern-voice-cautionary"
+%                    \autoBeamOff
+                    \accidentalStyle "modern-voice-cautionary"
                     \override Voice.TextScript #'padding = #2.0
                     \override MultiMeasureRest #'expand-limit = 1
                     \once \override Staff.TimeSignature #'style = #'() 
@@ -899,9 +879,7 @@ globalTempo = {
                     r8 e f e e e e f  |
                     c' 8 ^\f g c' d' ees' 4 c'  |
 %% 50
-                    \key d \minor
                     c' 4. c' 8 ~ c' 4 d'  |
-                    \key d \minor
                     g 4. ees' 8 ~ ees' 4 d'  |
                     d' 8 g a g bes a g d  |
                     f 2 f  |
@@ -910,7 +888,6 @@ globalTempo = {
                     a 4. a 8 ~ a 4 a  |
                     e' 8 cis' e' e' cis' e' e' cis'  |
                     r8 a bes a bes a f' d'  |
-                    \key d \minor
                     r8 a bes a f' d' a bes  |
                     r8 gis a gis a gis e' b  |
 %% 60
@@ -940,9 +917,7 @@ globalTempo = {
 %% 80
                     d' 8 a ~ a 4 ~ a d' 8 a  |
                     c' 8 g c' d' ees' 4 c'  |
-                    \key d \minor
                     c' 4. c' 8 ~ c' 4 d'  |
-                    \key d \minor
                     g 4. ees' 8 ~ ees' 4 d'  |
                     d' 8 g a g bes a g d  |
 %% 85
@@ -952,7 +927,6 @@ globalTempo = {
                     e' 8 cis' e' e' cis' e' e' cis'  |
                     r8 a bes a bes a f' d'  |
 %% 90
-                    \key d \minor
                     r8 a bes a f' d' a bes  |
                     r8 gis a gis a gis e' b  |
                     r8 gis a gis e' b gis a  |
@@ -971,7 +945,7 @@ globalTempo = {
                     r8 f g f g f f f  |
                     r8 f g f f f f g  |
 %% 105
-                    r\fermata 2 a  |
+                    r2 \fermata  a  |
                     \bar "|."
                 } % Voice
                 \new Lyrics \with {alignBelowContext="track 6"} \lyricsto "voice 6" \lyricmode {
@@ -991,8 +965,8 @@ globalTempo = {
                 \new Voice \globalTempo
 
                 \context Voice = "voice 7" {
-                    \autoBeamOff
-                    ccidentalStyle "modern-voice-cautionary"
+%                    \autoBeamOff
+                    \accidentalStyle "modern-voice-cautionary"
                     \override Voice.TextScript #'padding = #2.0
                     \override MultiMeasureRest #'expand-limit = 1
                     \once \override Staff.TimeSignature #'style = #'() 
@@ -1059,9 +1033,7 @@ globalTempo = {
                     r8 cis cis cis cis cis cis cis  |
                     ees 4. ^\f ees 8 ~ ees 4 a,  |
 %% 50
-                    \key d \minor
                     d 4. d 8 ~ d c bes, a,  |
-                    \key d \minor
                     g, 8 d ees d bes g d ees  |
                     d 4 d d d  |
                     cis 8 f bes c' cis' 2  |
@@ -1070,7 +1042,6 @@ globalTempo = {
                     f, 4. c 8 ~ c 4 c  |
                     e 4. a, 8 ~ a, a, b, cis  |
                     d 4. d 8 ~ d 4 d  |
-                    \key d \minor
                     d 4. d 8 ~ d 4 d  |
                     d 4. d 8 ~ d 4 d  |
 %% 60
@@ -1100,9 +1071,7 @@ globalTempo = {
 %% 80
                     r4 d 8 a, ~ a, 4 d 8 a,  |
                     ees 4. ees 8 ~ ees 4 a,  |
-                    \key d \minor
                     d 4. d 8 ~ d c bes, a,  |
-                    \key d \minor
                     g, 8 d ees d bes g d ees  |
                     d 4 d d d  |
 %% 85
@@ -1112,7 +1081,6 @@ globalTempo = {
                     e 4. a, 8 ~ a, a, b, cis  |
                     d 4. d 8 ~ d 4 d  |
 %% 90
-                    \key d \minor
                     d 4. d 8 ~ d 4 d  |
                     d 4. d 8 ~ d 4 d  |
                     d 4. d 8 ~ d 4 d  |
@@ -1131,7 +1099,7 @@ globalTempo = {
                     r8 d d d d d d d  |
                     r8 d d d d d d d  |
 %% 105
-                    r\fermata 2 d  |
+                    r2 \fermata  d  |
                     \bar "|."
                 } % Voice
                 \new Lyrics \with {alignBelowContext="track 7"} \lyricsto "voice 7" \lyricmode {
@@ -1151,8 +1119,8 @@ globalTempo = {
                 \new Voice \globalTempo
 
                 \context Voice = "voice 8" {
-                    \autoBeamOff
-                    ccidentalStyle "modern-voice-cautionary"
+%                    \autoBeamOff
+                    \accidentalStyle "modern-voice-cautionary"
                     \override Voice.TextScript #'padding = #2.0
                     \override MultiMeasureRest #'expand-limit = 1
                     \once \override Staff.TimeSignature #'style = #'() 
@@ -1219,9 +1187,7 @@ globalTempo = {
                     a, 4. a, 8 ~ a, 4 a,  |
                     ees 4. ^\f ees 8 ~ ees 4 a,  |
 %% 50
-                    \key d \minor
                     d 4. d 8 ~ d c bes, a,  |
-                    \key d \minor
                     g, 8 d ees d bes g d ees  |
                     d 4 d d d  |
                     cis 8 f bes c' cis' 2  |
@@ -1230,7 +1196,6 @@ globalTempo = {
                     f, 4. c 8 ~ c 4 c  |
                     e 4. a, 8 ~ a, a, b, cis  |
                     d 4. d 8 ~ d 4 d  |
-                    \key d \minor
                     d 4. d 8 ~ d 4 d  |
                     d 4. d 8 ~ d 4 d  |
 %% 60
@@ -1260,9 +1225,7 @@ globalTempo = {
 %% 80
                     r4 d 8 a, ~ a, 4 d 8 a,  |
                     ees 4. ees 8 ~ ees 4 a,  |
-                    \key d \minor
                     d 4. d 8 ~ d c bes, a,  |
-                    \key d \minor
                     g, 8 d ees d bes g d ees  |
                     d 4 d d d  |
 %% 85
@@ -1272,7 +1235,6 @@ globalTempo = {
                     e 4. a, 8 ~ a, a, b, cis  |
                     d 4. d 8 ~ d 4 d  |
 %% 90
-                    \key d \minor
                     d 4. d 8 ~ d 4 d  |
                     d 4. d 8 ~ d 4 d  |
                     d 4. d 8 ~ d 4 d  |
@@ -1282,18 +1244,16 @@ globalTempo = {
                     d 4. d 8 ~ d 4 d  |
                     d 4. d 8 ~ d 4 d  |
                     d 4. d 8 ~ d 4 d  |
-                    \key d \minor
                     d 4. d 8 ~ d 4 d  |
                     d 4. d 8 ~ d 4 d  |
 %% 100
                     d 4. d 8 ~ d 4 d  |
                     d 4. d 8 ~ d 4 d  |
-                    \key d \minor
                     d 4. d 8 ~ d 4 d  |
                     d 4. d 8 ~ d 4 d  |
                     d 4. d 8 ~ d 4 d  |
 %% 105
-                    r\fermata 2 d  |
+                    r2 \fermata  d  |
                     \bar "|."
                 } % Voice
                 \new Lyrics \with {alignBelowContext="track 8"} \lyricsto "voice 8" \lyricmode {
@@ -1314,6 +1274,6 @@ short-indent = 1.5\cm
         \context { \GrandStaff \accepts "Lyrics" }
     }
 %     uncomment to enable generating midi file from the lilypond source
-%         \midi {
-%         } 
+         \midi {
+         } 
 } % score
