@@ -25,3 +25,10 @@ import :
 
 commit :
 	git commit -a
+
+push :
+	git push
+
+pull :
+	git pull
+
