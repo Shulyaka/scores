@@ -3,12 +3,11 @@ TAGNAME=$(shell git rev-parse --short HEAD)
 all : $(patsubst %.ly, %.pdf, $(wildcard *.ly))
 
 clean :
-	rm -f *.pdf *.ps
+	rm -f *.pdf *.ps *.mid
 
 %.pdf : %.ly
 	echo Processing file $<
 	sed -e 's/tagline = ""/tagline = "git revision $(TAGNAME)"/g;' -e "s/\\\\\\\\header/\#(ly:set-option 'point-and-click \#f)\n\\\\\\\\header/" $< | LANG=en_US lilypond -o `echo $< | sed 's/\.ly//g'` -
-	# rm `echo $< | sed 's/\.ly/.ps/g'`
 
 import :
 	#Imports a Rosegarden-exported lilypond file (fixing some formatting)
