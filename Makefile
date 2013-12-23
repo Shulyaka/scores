@@ -30,3 +30,6 @@ push :
 pull :
 	git pull
 
+convert :
+	convert-ly.py -e *.ly
+	dos2unix --d2u *.ly
