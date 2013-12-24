@@ -1275,5 +1275,5 @@ short-indent = 1.5\cm
     }
 %     uncomment to enable generating midi file from the lilypond source
          \midi {
-         } 
+         }
 } % score

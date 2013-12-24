@@ -23,6 +23,7 @@ globalTempo = {
     \tempo 4 = 60  \skip 4 
     \tempo 4 = 30  \skip 4 
 }
+\score {
 \new PianoStaff
 << % common
 
@@ -102,4 +103,4 @@ globalTempo = {
 
 \layout {
 }
-%} % score
+} % score

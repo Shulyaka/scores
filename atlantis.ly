@@ -203,10 +203,10 @@ d 8 [ f a ] d' [ a f ]  |
 g 8 [ b d' ] g' [ d' g' ]  |
                     
 % absTime = 20160 barStart = 20160
-#(set-octavation 1) b' 8 [ g' b' ] d'' [ b' < d'' e > ]  |
+\ottava #1 b' 8 [ g' b' ] d'' [ b' < d'' e > ]  |
                     
 % absTime = 23040 barStart = 23040
-#(set-octavation 0) c 8 [ e g ] c' [ g e ]  |
+\ottava #0 c 8 [ e g ] c' [ g e ]  |
 %% 10
                     
 % absTime = 25920 barStart = 25920
@@ -229,10 +229,10 @@ d 8 [ f a ] d' [ a f ]  |
 g 8 [ b d' ] g' [ d' g' ]  |
                     
 % absTime = 43200 barStart = 43200
-#(set-octavation 1) b' 8 [ g' b' ] d'' [ b' < d'' e > ]  |
+\ottava #1 b' 8 [ g' b' ] d'' [ b' < d'' e > ]  |
                     
 % absTime = 46080 barStart = 46080
-#(set-octavation 0) d 8 [ f a ] d' [ a f ]  |
+\ottava #0 d 8 [ f a ] d' [ a f ]  |
                     
 % absTime = 48960 barStart = 48960
 d 8 [ f a ] e' [ b g ]  |
@@ -274,10 +274,10 @@ g 8 [ b d' ] g' [ d' g' ]  |
 %% 30
                     
 % absTime = 83520 barStart = 83520
-#(set-octavation 1) b' 8 [ g' b' ] d'' [ b' < d'' e > ]  |
+\ottava #1 b' 8 [ g' b' ] d'' [ b' < d'' e > ]  |
                     
 % absTime = 86400 barStart = 86400
-#(set-octavation 0) c 8 [ e g ] c' [ g e ]  |
+\ottava #0 c 8 [ e g ] c' [ g e ]  |
                     
 % absTime = 89280 barStart = 89280
 g 8 [ bes d' ] f' [ d' bes ]  |
