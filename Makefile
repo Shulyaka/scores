@@ -1,8 +1,8 @@
 TAGNAME=$(shell git rev-parse --short HEAD)
 
-pdf : $(patsubst %.ly, %.pdf, $(wildcard *.ly))
-
 mid : $(patsubst %.ly, %.mid, $(wildcard *.ly))
+
+pdf : $(patsubst %.ly, %.pdf, $(wildcard *.ly))
 
 clean :
 	rm -f *.pdf *.ps *.mid
