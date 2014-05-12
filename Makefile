@@ -13,7 +13,7 @@ clean :
 
 %.mid : %.ly
 	echo Processing file $<
-	if [ `grep -c -e '^[^%]*\\\\midi' $<` -gt 0 ]; then echo already have mid; sed -e 's/tagline = ""/tagline = "git revision $(TAGNAME)"/g;' -e "s/\\\\header/\#(ly:set-option 'point-and-click \#f)\n\\\\header/" $< | LANG=en_US lilypond -o `echo $< | sed 's/\.ly//g'` - ; else sed -e 's/tagline = ""/tagline = "git revision $(TAGNAME)"/g;' -e "s/\\\\header/\#(ly:set-option 'point-and-click \#f)\n\\\\header/" -e "s/^} % score/\\\\midi {}\n} % score/" $< | LANG=en_US lilypond -o `echo $< | sed 's/\.ly//g'` - ; fi
+	if [ `grep -c -e '^[^%]*\\\\midi' $<` -gt 0 ]; then echo already have mid; sed -e 's/tagline = ""/tagline = "git revision $(TAGNAME)"/g;' -e "s/\\\\header/\#(ly:set-option 'point-and-click \#f)\n\\\\header/" $< | LANG=en_US lilypond -dmidi-extension=mid -o `echo $< | sed 's/\.ly//g'` - ; else sed -e 's/tagline = ""/tagline = "git revision $(TAGNAME)"/g;' -e "s/\\\\header/\#(ly:set-option 'point-and-click \#f)\n\\\\header/" -e "s/^} % score/\\\\midi {}\n} % score/" $< | LANG=en_US lilypond -dmidi-extension=mid -o `echo $< | sed 's/\.ly//g'` - ; fi
 
 import :
 	#Imports a Rosegarden-exported lilypond file (fixing some formatting)
