@@ -38,4 +38,5 @@ pull :
 
 convert :
 	convert-ly -e *.ly
+	rm -f *.ly~
 	# dos2unix --d2u *.ly
