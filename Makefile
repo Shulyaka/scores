@@ -1,4 +1,5 @@
 TAGNAME=$(shell git rev-parse --short HEAD)
+MAILER=echo
 
 mid : $(patsubst %.ly, %.mid, $(wildcard *.ly))
 
@@ -24,7 +25,7 @@ import :
 	cp -n $(FILE) .
 	perl -pe 's/Created using Rosegarden .* and LilyPond//g;' -pe 's/[_^-]([<>\(\)~\\])(?!markup)/\1/g;' -pe 's/((\\.?[fp] )|(\\[<>]))/^\1/g;' -pe 's/-" /" -- /g;' -pe 's/(\\context Voice = ".*" {)/\1\n                    \\autoBeamOff\n                    \\accidentalStyle "modern-voice-cautionary"/g' `echo $(FILE) | sed -e 's/.*\///'` > `echo $(FILE) | sed -e 's/.*\///' -e 's/\.ly/-new.ly/' ` && mv `echo $(FILE) | sed -e 's/.*\///' -e 's/\.ly/-new.ly/' ` `echo $(FILE) | sed -e 's/.*\///'`
 	git add `echo $(FILE) | sed -e 's/.*\///'`
-	git commit `echo $(FILE) | sed -e 's/.*\///'` -m "Imported file `echo $(FILE) | sed -e 's/.*\///'`"
+	git commit `echo $(FILE) | sed -e 's/.*\///'` -m "Imported file `echo $(FILE) | sed -e 's/.*\///'` (auto)"
 	echo "File `echo $(FILE) | sed -e 's/.*\///'` imported."
 
 commit :
@@ -37,6 +38,17 @@ pull :
 	git pull
 
 convert :
-	convert-ly -e *.ly
+	convert-ly -d -e *.ly
 	rm -f *.ly~
 	# dos2unix --d2u *.ly
+
+autoconvert :
+	git status | grep -cq 'modified' && (${MAILER} "Error: Uncommitted changes present. Commit first, then re-run autoconvert"; exit 1)
+	git pull || (${MAILER} "Error: git pull failed"; exit 2)
+	make convert || (${MAILER} "Error: convert-ly failed"; exit 3)
+	git status | grep -cq 'modified' && ( \
+	make || (${MAILER} "Error: rebuild after upgrading failed"; exit 4) ;\
+	git commit -a -m "convert-ly to version `convert-ly --version` (auto)" || (${MAILER} "Error: git commit failed"; exit 5) ;\
+	git push || (${MAILER} "Error: git push failed"; exit 6) ;\
+	${MAILER} "Successfully converted to version `convert-ly --version`" )
+
