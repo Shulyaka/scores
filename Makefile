@@ -69,9 +69,8 @@ autoconvert :
 	git pull || (${MAILER} "Error: git pull failed"; exit 2)
 	make convert || (${MAILER} "Error: convert-ly failed"; exit 3)
 	if [ "`git status | grep -c 'modified'`" -gt 0 ]; then \
-	make || (${MAILER} "Error: rebuild after upgrading failed"; exit 4) ;\
-	git commit -a -m "convert-ly to version `convert-ly --version` (auto)" || (${MAILER} "Error: git commit failed"; exit 5) ;\
-	git push || (${MAILER} "Error: git push failed"; exit 6) ;\
-	${MAILER} "Successfully converted to version `convert-ly --version`" ;\
+		git commit -a -m "convert-ly to version `convert-ly --version` (auto)" || (${MAILER} "Error: git commit failed"; exit 4) ;\
+		git push || (${MAILER} "Error: git push failed"; exit 5) ;\
+		${MAILER} "Successfully converted to version `convert-ly --version`" ;\
 	fi
 
