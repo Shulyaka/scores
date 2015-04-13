@@ -71,6 +71,8 @@ autoconvert :
 	if [ "`git status | grep -c 'modified'`" -gt 0 ]; then \
 		git commit -a -m "convert-ly to version `convert-ly --version` (auto)" || (${MAILER} "Error: git commit failed"; exit 4) ;\
 		git push || (${MAILER} "Error: git push failed"; exit 5) ;\
-		${MAILER} "Successfully converted to version `convert-ly --version`" ;\
+		${MAILER} "Successfully converted to lilypond version `convert-ly --version`" ;\
+	else \
+		${MAILER} "Nothing to convert for lilypond version `convert-ly --version`" ;\
 	fi
 
