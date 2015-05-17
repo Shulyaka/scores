@@ -8,7 +8,7 @@ mid : $(patsubst %.ly, %.mid, $(wildcard *.ly))
 pdf : $(patsubst %.ly, %.pdf, $(wildcard *.ly))
 
 clean :
-	rm -f *.pdf *.ps *.mid
+	rm -f *.pdf *.mid
 
 %.pdf : %.ly
 	echo Processing file $<
@@ -20,14 +20,14 @@ clean :
 	echo Processing file $<
 	if [ `grep -c -e '^[^%]*\\\\midi' $<` -gt 0 ]; then \
 		echo already have mid ;\
-		sed -e 's/tagline = ""/tagline = "git revision $(TAGNAME)"/g;' \
-		    -e "s/\\\\header/\#(ly:set-option 'point-and-click \#f)\n\\\\header/" \
-		    $< | LANG=en_US lilypond -dmidi-extension=mid -o `echo $< | sed 's/\.ly//g'` - ;\
+		sed -e "s/\\\\header/\\\\include \"articulate.ly\"\n\\\\header/" \
+		    -e "s/<< % common/\\\\articulate << % common/" \
+		    $< | LANG=en_US lilypond -dmidi-extension=mid -dno-print-pages -o `echo $< | sed 's/\.ly//g'` - ;\
 	else \
-		sed -e 's/tagline = ""/tagline = "git revision $(TAGNAME)"/g;' \
-		    -e "s/\\\\header/\#(ly:set-option 'point-and-click \#f)\n\\\\header/" \
+		sed -e "s/\\\\header/\\\\include \"articulate.ly\"\n\\\\header/" \
+		    -e "s/<< % common/\\\\articulate << % common/" \
 		    -e "s/^} % score/\\\\midi {}\n} % score/" \
-		    $< | LANG=en_US lilypond -dmidi-extension=mid -o `echo $< | sed 's/\.ly//g'` - ;\
+		    $< | LANG=en_US lilypond -dmidi-extension=mid -dno-print-pages -o `echo $< | sed 's/\.ly//g'` - ;\
 	fi
 
 import :
@@ -41,6 +41,7 @@ import :
 	     -pe 's/[_^-]([<>\(\)~\\])(?!markup)/\1/g;' \
 	     -pe 's/((\\.?[fp] )|(\\[<>]))/^\1/g;' \
 	     -pe 's/-" /" -- /g;' \
+	     -pe 's/Acoustic Grand Piano/Acoustic Grand/g;' \
 	     -pe 's/(\\context Voice = ".*" {)/\1\n                    \\autoBeamOff\n                    \\accidentalStyle "modern-voice-cautionary"/g' \
 	     `echo $(FILE) | sed -e 's/.*\///'` > `echo $(FILE) | sed -e 's/.*\///' -e 's/\.ly/-new.ly/' `
 	mv `echo $(FILE) | sed -e 's/.*\///' -e 's/\.ly/-new.ly/' ` `echo $(FILE) | sed -e 's/.*\///'`
