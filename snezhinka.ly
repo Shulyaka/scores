@@ -5,7 +5,6 @@
     title = "Снежинка"
     tagline = ""
 }
-#(ly:set-option 'point-and-click #f)
 #(set-global-staff-size 17)
 #(set-default-paper-size "a4")
 global = { 
@@ -24,7 +23,7 @@ globalTempo = {
 
             \context Staff = "track 1, Сопрано" << 
                 \set Staff.instrumentName = \markup { \column { "Сопрано " } }
-                \set Staff.midiInstrument = "choir aahs"
+                \set Staff.midiInstrument = "Acoustic Grand"
                 \set Score.skipBars = ##t
                 \set Staff.printKeyCancellation = ##f
                 \new Voice \global
@@ -106,7 +105,7 @@ globalTempo = {
 
             \context Staff = "track 2, Альт" << 
                 \set Staff.instrumentName = \markup { \column { "Альт " } }
-                \set Staff.midiInstrument = "choir aahs"
+                \set Staff.midiInstrument = "Acoustic Grand"
                 \set Score.skipBars = ##t
                 \set Staff.printKeyCancellation = ##f
                 \new Voice \global
@@ -188,7 +187,7 @@ globalTempo = {
 
             \context Staff = "track 3, Тенор" << 
                 \set Staff.instrumentName = \markup { \column { "Тенор " } }
-                \set Staff.midiInstrument = "choir aahs"
+                \set Staff.midiInstrument = "Acoustic Grand"
                 \set Score.skipBars = ##t
                 \set Staff.printKeyCancellation = ##f
                 \new Voice \global
@@ -270,7 +269,7 @@ globalTempo = {
 
             \context Staff = "track 4, Бас" << 
                 \set Staff.instrumentName = \markup { \column { "Бас " } }
-                \set Staff.midiInstrument = "choir aahs"
+                \set Staff.midiInstrument = "Acoustic Grand"
                 \set Score.skipBars = ##t
                 \set Staff.printKeyCancellation = ##f
                 \new Voice \global

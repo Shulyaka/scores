@@ -28,7 +28,7 @@ globalTempo = {
 
             \context Staff = "track 1, Альт" << 
                 \set Staff.instrumentName = \markup { \center-column { "Альт " } }
-                \set Staff.midiInstrument = "Acoustic Grand Piano"
+                \set Staff.midiInstrument = "Acoustic Grand"
                 \set Score.skipBars = ##t
                 \set Staff.printKeyCancellation = ##f
                 \new Voice \global
@@ -102,7 +102,7 @@ globalTempo = {
 
             \context Staff = "track 2, Тенор" << 
                 \set Staff.instrumentName = \markup { \center-column { "Тенор " } }
-                \set Staff.midiInstrument = "Acoustic Grand Piano"
+                \set Staff.midiInstrument = "Acoustic Grand"
                 \set Score.skipBars = ##t
                 \set Staff.printKeyCancellation = ##f
                 \new Voice \global

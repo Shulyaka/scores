@@ -5,7 +5,6 @@
     title = "Libertango"
     tagline = ""
 }
-#(ly:set-option 'point-and-click #f)
 #(set-global-staff-size 19)
 #(set-default-paper-size "a4")
 global = { 
@@ -24,7 +23,7 @@ globalTempo = {
 
             \context Staff = "track 1, Soprano I" << 
                 \set Staff.instrumentName = \markup { \center-column { "Soprano I " } }
-                \set Staff.midiInstrument = "Acoustic Grand Piano"
+                \set Staff.midiInstrument = "Acoustic Grand"
                 \set Score.skipBars = ##t
                 \set Staff.printKeyCancellation = ##f
                 \new Voice \global
@@ -185,7 +184,7 @@ globalTempo = {
 
             \context Staff = "track 2, Soprano II" << 
                 \set Staff.instrumentName = \markup { \center-column { "Soprano II " } }
-                \set Staff.midiInstrument = "Acoustic Grand Piano"
+                \set Staff.midiInstrument = "Acoustic Grand"
                 \set Score.skipBars = ##t
                 \set Staff.printKeyCancellation = ##f
                 \new Voice \global
@@ -340,7 +339,7 @@ globalTempo = {
 
             \context Staff = "track 3, Alt I" << 
                 \set Staff.instrumentName = \markup { \center-column { "Alt I " } }
-                \set Staff.midiInstrument = "Acoustic Grand Piano"
+                \set Staff.midiInstrument = "Acoustic Grand"
                 \set Score.skipBars = ##t
                 \set Staff.printKeyCancellation = ##f
                 \new Voice \global
@@ -495,7 +494,7 @@ globalTempo = {
 
             \context Staff = "track 4, Alt II" << 
                 \set Staff.instrumentName = \markup { \center-column { "Alt II " } }
-                \set Staff.midiInstrument = "Acoustic Grand Piano"
+                \set Staff.midiInstrument = "Acoustic Grand"
                 \set Score.skipBars = ##t
                 \set Staff.printKeyCancellation = ##f
                 \new Voice \global
@@ -650,7 +649,7 @@ globalTempo = {
 
             \context Staff = "track 5, Tenor I" << 
                 \set Staff.instrumentName = \markup { \center-column { "Tenor I " } }
-                \set Staff.midiInstrument = "Acoustic Grand Piano"
+                \set Staff.midiInstrument = "Acoustic Grand"
                 \set Score.skipBars = ##t
                 \set Staff.printKeyCancellation = ##f
                 \new Voice \global
@@ -804,7 +803,7 @@ globalTempo = {
 
             \context Staff = "track 6, Tenor II" << 
                 \set Staff.instrumentName = \markup { \center-column { "Tenor II " } }
-                \set Staff.midiInstrument = "Acoustic Grand Piano"
+                \set Staff.midiInstrument = "Acoustic Grand"
                 \set Score.skipBars = ##t
                 \set Staff.printKeyCancellation = ##f
                 \new Voice \global
@@ -958,7 +957,7 @@ globalTempo = {
 
             \context Staff = "track 7, Bass I" << 
                 \set Staff.instrumentName = \markup { \center-column { "Bass I " } }
-                \set Staff.midiInstrument = "Acoustic Grand Piano"
+                \set Staff.midiInstrument = "Acoustic Grand"
                 \set Score.skipBars = ##t
                 \set Staff.printKeyCancellation = ##f
                 \new Voice \global
@@ -1112,7 +1111,7 @@ globalTempo = {
 
             \context Staff = "track 8, Bass II" << 
                 \set Staff.instrumentName = \markup { \center-column { "Bass II " } }
-                \set Staff.midiInstrument = "Acoustic Grand Piano"
+                \set Staff.midiInstrument = "Acoustic Grand"
                 \set Score.skipBars = ##t
                 \set Staff.printKeyCancellation = ##f
                 \new Voice \global
