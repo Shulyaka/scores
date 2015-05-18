@@ -4,8 +4,7 @@
 #(ly:set-option 'point-and-click #f)
 \header {
     title = "Три девушки"
-%    subtitle = "Издание первое, \"Work in Progress\""
-%    tagline = "Специально для Академического хора МГУ"
+%    copyright = "Специально для Академического хора МГУ"
     tagline = ""
 }
 #(set-global-staff-size 19)

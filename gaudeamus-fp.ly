@@ -4,8 +4,8 @@
 #(ly:set-option 'point-and-click #f)
 \header {
     arranger = "Лаков Йончур"
-%    tagline = "Специально для Академического хора МГУ"
-    tagline = " "
+%    copyright = "Специально для Академического хора МГУ"
+    tagline = ""
     title = "Gaudeamus in a-moll"
 }
 #(set-global-staff-size 25)

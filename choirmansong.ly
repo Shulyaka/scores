@@ -4,7 +4,6 @@
 #(ly:set-option 'point-and-click #f)
 \header {
     title = "Песня храброго хориста"
-%    tagline = "Created using Rosegarden 1.6.1 and LilyPond"
     tagline = ""
 }
 #(set-global-staff-size 23)

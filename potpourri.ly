@@ -3,10 +3,9 @@
 % point and click debugging is disabled
 #(ly:set-option 'point-and-click #f)
 \header {
-%    subtitle = "Издание четвёртое, \"Release Candidate 1\""
-%    arranger = "Д. Шуляка"
-    tagline = "Copyright (C) Академический хор МГУ, 2009"
+    copyright = "Copyright (C) Академический хор МГУ, 2009"
     title = "Попурри"
+    tagline = ""
 }
 #(set-global-staff-size 19)
 #(set-default-paper-size "a4")

@@ -8,7 +8,7 @@
     poet = "Jeremi Przybora"
     subtitle = "TENOR"
     title = "HERBATKA"
-    tagline = " "
+    tagline = ""
 }
 #(set-global-staff-size 25)
 #(set-default-paper-size "a4")

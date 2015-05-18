@@ -188,7 +188,7 @@ globalTempo = {
 
             \context Staff = "track 3, Тенор" << 
                 \set Staff.instrumentName = \markup { \column { "Тенор " } }
-                \set Staff.midiInstrument = "choir aahs2"
+                \set Staff.midiInstrument = "choir aahs"
                 \set Score.skipBars = ##t
                 \set Staff.printKeyCancellation = ##f
                 \new Voice \global

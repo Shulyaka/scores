@@ -5,7 +5,7 @@
 \header {
     arranger = "Denis Shulyaka"
     copyright = "Based on Stargate Atlantis movie theme"
-    tagline = " "
+    tagline = ""
     title = "Atlantis"
 }
 #(set-global-staff-size 19)

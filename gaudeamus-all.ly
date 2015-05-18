@@ -4,8 +4,9 @@
 #(ly:set-option 'point-and-click #f)
 \header {
     arranger = "Arr. by Denis Shulyaka"
-    tagline = "Специально для Академического хора МГУ"
+    copyright = "Специально для Академического хора МГУ"
     title = "Gaudeamus in a-moll"
+    tagline = ""
 }
 #(set-global-staff-size 23)
 #(set-default-paper-size "a4")

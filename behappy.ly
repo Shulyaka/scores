@@ -3,11 +3,11 @@
 % point and click debugging is disabled
 #(ly:set-option 'point-and-click #f)
 \header {
-    composer = "Подобрал Денис Шуляка"
-    poet = "Bobby McFerrin"
+    composer = "Bobby McFerrin"
     subtitle = "Издание первое, \"Proof of Concept\""
     title = "Don't Worry, Be Happy"
-    tagline = "Специально для Академического хора МГУ"
+    copyright = "Специально для Академического хора МГУ"
+    tagline = ""
 }
 #(set-global-staff-size 19)
 #(set-default-paper-size "a4")

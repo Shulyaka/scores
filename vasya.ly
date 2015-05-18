@@ -6,9 +6,9 @@
     arranger = "Обработка Д. Шуляки"
     composer = "Музыка Гр. Гладкова"
     poet = "Слова А. Кушнера"
-%    subtitle = "Издание второе, \"Milestone 1\""
-    tagline = "Специально для Академического хора МГУ"
+    copyright = "Специально для Академического хора МГУ"
     title = "Пой, Вася!"
+    tagline = ""
 }
 #(set-global-staff-size 19)
 #(set-default-paper-size "a4")
