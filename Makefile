@@ -1,6 +1,8 @@
 TAGNAME=$(shell git rev-parse --short HEAD)
 MAILER=echo
 
+.PHONY: all mid pdf clean clean-old import pull push refresh convert autoconvert
+
 all : mid pdf
 
 mid : $(patsubst %.ly, %.mid, $(wildcard *.ly))
@@ -56,6 +58,9 @@ import :
 
 pull :
 	git pull
+
+push :
+	git push
 
 refresh : pull clean-old all
 
