@@ -10,6 +10,9 @@ pdf : $(patsubst %.ly, %.pdf, $(wildcard *.ly))
 clean :
 	rm -f *.pdf *.mid
 
+clean-old :
+	find . \( -name \*.pdf -o -name \*.mid \) -execdir bash -c 'FILE=$$(echo {} | sed -E "s/\.pdf|\.mid\$$//" | sed -e "s/^\.\///"); if [ \! -f $$FILE.ly ]; then rm -f $$FILE.pdf $$FILE.mid; fi;' \;
+
 %.pdf : %.ly
 	echo Processing file $<
 	sed -e 's/tagline = ""/tagline = "git revision $(TAGNAME)"/g;' \
@@ -51,14 +54,10 @@ import :
 	git commit `echo $(FILE) | sed -e 's/.*\///'` -m "Imported file `echo $(FILE) | sed -e 's/.*\///'` (auto)"
 	echo "File `echo $(FILE) | sed -e 's/.*\///'` imported."
 
-commit :
-	git commit -a
-
-push :
-	git push
-
 pull :
 	git pull
+
+refresh : pull clean-old all
 
 convert :
 	convert-ly -d -e *.ly
@@ -66,7 +65,7 @@ convert :
 	# dos2unix --d2u *.ly
 
 autoconvert :
-	if [ "`git status | grep -c 'modified'`" -gt 0 ]; then ${MAILER} "Error: Uncommitted changes present. Commit first, then re-run autoconvert"; exit 1; fi
+	if [ "`LANG=en_US git status | grep -c 'modified'`" -gt 0 ]; then ${MAILER} "Error: Uncommitted changes present. Commit first, then re-run autoconvert"; exit 1; fi
 	git pull || (${MAILER} "Error: git pull failed"; exit 2)
 	make convert || (${MAILER} "Error: convert-ly failed"; exit 3)
 	if [ "`LANG=en_US git status | grep -c 'modified'`" -gt 0 ]; then \
