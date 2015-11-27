@@ -69,7 +69,7 @@ autoconvert :
 	if [ "`git status | grep -c 'modified'`" -gt 0 ]; then ${MAILER} "Error: Uncommitted changes present. Commit first, then re-run autoconvert"; exit 1; fi
 	git pull || (${MAILER} "Error: git pull failed"; exit 2)
 	make convert || (${MAILER} "Error: convert-ly failed"; exit 3)
-	if [ "`git status | grep -c 'modified'`" -gt 0 ]; then \
+	if [ "`LANG=en_US git status | grep -c 'modified'`" -gt 0 ]; then \
 		git commit -a -m "convert-ly to version `convert-ly --version` (auto)" || (${MAILER} "Error: git commit failed"; exit 4) ;\
 		git push || (${MAILER} "Error: git push failed"; exit 5) ;\
 		${MAILER} "Successfully converted to lilypond version `convert-ly --version`" ;\
