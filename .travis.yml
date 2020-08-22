@@ -1,6 +1,7 @@
 language: lilypond
 dist: focal
 script: make
+before_script: lilypond --version
 addons:
   apt:
     packages:
