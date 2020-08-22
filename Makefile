@@ -17,8 +17,7 @@ clean-old :
 
 %.pdf : %.ly
 	@echo Processing file $<
-	sed -e 's/tagline = ""/tagline = "git revision $(TAGNAME)"/g;' \
-	    $< | LANG=en_US lilypond -dno-point-and-click -o `echo $< | sed 's/\.ly//g'` -
+	LANG=en_US lilypond -dno-point-and-click -o `echo $< | sed 's/\.ly//g'` $<
 
 %.mid : %.ly
 	@echo Processing file $<

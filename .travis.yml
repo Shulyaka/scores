@@ -1,12 +1,14 @@
 language: lilypond
 os: linux
 dist: focal
-script: make -j 2
-before_script: lilypond --version
 addons:
   apt:
     packages:
     - lilypond
+before_script:
+  - lilypond --version
+  - for FILE in *.ly; do sed -i -e "s/tagline = \"\"/tagline = \"git revision $(git log -n 1 --pretty=format:%h -- $FILE)\"/g;" "$FILE"; done
+script: make -j 2
 before_deploy:
   - mv *.{pdf,mid,midi} pages/
   - cd pages/
@@ -14,7 +16,7 @@ before_deploy:
 deploy:
   provider: pages
   skip_cleanup: true
-  token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
+  token: $GITHUB_TOKEN
   local_dir: pages
   on:
     branch: master
