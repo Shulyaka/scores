@@ -52,8 +52,8 @@ import :
 	mv `echo $(FILE) | sed -e 's/.*\///' -e 's/\.ly/-new.ly/' ` `echo $(FILE) | sed -e 's/.*\///'`
 	convert-ly -c -e `echo $(FILE) | sed -e 's/.*\///'`
 	rm -f `echo $(FILE) | sed -e 's/.*\///'`~
-	git add `echo $(FILE) | sed -e 's/.*\///'`
-	git commit `echo $(FILE) | sed -e 's/.*\///'` -m "Imported file `echo $(FILE) | sed -e 's/.*\///'` (auto)"
+	#git add `echo $(FILE) | sed -e 's/.*\///'`
+	#git commit `echo $(FILE) | sed -e 's/.*\///'` -m "Imported file `echo $(FILE) | sed -e 's/.*\///'` (auto)"
 	@echo "File `echo $(FILE) | sed -e 's/.*\///'` imported."
 
 pull :
