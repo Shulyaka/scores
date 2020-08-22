@@ -1,4 +1,5 @@
 language: lilypond
+dist: bionic
 script: make
 addons:
   apt:
