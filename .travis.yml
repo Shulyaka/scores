@@ -1,5 +1,5 @@
 language: lilypond
-dist: bionic
+dist: focal
 script: make
 addons:
   apt:
