@@ -13,7 +13,7 @@ do
 	else
 		THUMBNAIL="images/filetype_${FILE##*.}.png"
 	fi
-	echo "<li><a href='$FILE' title='$FILE'><em-pdf>$FILE</em-pdf><span></span><img src='$THUMBNAIL' height='120' alt='$FILE' /></a></li>" >> index.html
+	echo "<li><a href='$FILE' title='$FILE'><em>$FILE</em><span></span><img src='$THUMBNAIL' height='120' alt='$FILE' /></a></li>" >> index.html
 done
 
 cat footer.html >> index.html
