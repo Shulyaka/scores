@@ -470,7 +470,7 @@ globalTempo = {
                     ces'' 4. ces'' 8 \! ces'' ces'' ces'' 4  |
 %% 85
                     R1  |
-                    r4 r r8 < des' aes > ^\f \accent ^\< < aes des' > \accent < aes des' > \accent  |
+                    r2 r8 < des' aes > ^\f \accent ^\< < aes des' > \accent < aes des' > \accent  |
                     < aes des' > 8 \fff \accent \! ( < aes des' > ^\pp ^\< < aes des' > < des' aes > < des' aes > < des' aes > < des' aes > < aes des' > 
                     % Предупреждение: слишком длинный такт здесь урезан |
                     < des' aes > 8 < des' aes > < des' aes > < aes des' > < des' aes > < des' aes > < des' aes > < aes des' >  |
@@ -541,6 +541,7 @@ globalTempo = {
                     % Segment: Acoustic Grand
                     \override Voice.TextScript.padding = #2.0
                     \override MultiMeasureRest.expand-limit = 1
+		    \override Glissando.style = #'zigzag
                     \once \override Staff.TimeSignature.style = #'() 
                     \time 4/4
                     
@@ -606,7 +607,7 @@ globalTempo = {
                     < ces'' ces' > 2. < ces'' ces' > 4  |
 %% 50
                     < des' des'' > 1 \accent ~  |
-                    < des'' des' > 2 r4 r  |
+                    < des'' des' > 2 r  |
                     < aes ees' > 4 ^\mf \staccato < ees' aes > \staccato < ees' aes > \staccato < ees' aes > \staccato  |
                     < ees' g > 4 \staccato < g ees' > \staccato < g ees' > \staccato < g ees' > \staccato  |
                     < f f' > 4 \staccato < f' f > \staccato < f' f > \staccato < f' f > \staccato  |
@@ -672,9 +673,9 @@ globalTempo = {
                     < ees' bes > 4 ) < ees' bes > ^\mf ^\< < ees' bes > < ees' bes > 
                     % Предупреждение: слишком длинный такт здесь урезан |
                     < bes f' > 4 < bes f' > < bes f' > < bes f' >  |
-                    < des' f' > 8 < des' f' > < des' f' > < des' f' > < des' f' > ^\f \! ( 
+                    < des' f' > 8 < des' f' > < des' f' > < des' f' > \afterGrace < des' f' > ^\f \! \glissando { \hideNotes aes'16 \glissando \unHideNotes }
                     \override Voice.NoteHead.style = #'cross
-                    des ) 
+                    des8 
                     \override Voice.NoteHead.style = #'default
                     des' des'  |
                     < aes c' > 2 r8 < aes c' > < c' aes > ees' ~  |
@@ -724,6 +725,7 @@ globalTempo = {
                     % Segment: Acoustic Grand
                     \override Voice.TextScript.padding = #2.0
                     \override MultiMeasureRest.expand-limit = 1
+		    \override Glissando.style = #'zigzag
                     \once \override Staff.TimeSignature.style = #'() 
                     \time 4/4
                     
@@ -813,19 +815,27 @@ globalTempo = {
                     ges 2 ~ ges 8 r r4  |
 %% 85
                     R1*2  |
-                    < \tweak style #'cross des''' \tweak style #'cross des' > 4. ^\ff \accent ( 
+		    \afterGrace
+		    < \tweak style #'cross des''' \tweak style #'cross des' > 4. ^\ff \accent
+		    \glissando { \hideNotes des'8 \unHideNotes }
                     \override Voice.NoteHead.style = #'cross
-                    des' 8 \accent ~ des' 4 ) des' \accent  |
+                    des' 8 \accent ~ des' 4 des' \accent  |
                     des' 4. \accent des' 8 \accent ~ des' 4 des' \accent  |
                     des' 4. \accent des' 8 \accent ~ des' 4 des' \accent  |
 %% 90
                     des' 4. \accent des' 8 \accent ~ des' 4 des' \accent  |
-                    < des''' des' > 4. \accent ( des' 8 \accent ~ des' 4 ) des' \accent  |
+		    \afterGrace
+                    < des''' des' > 4. \accent
+		    \glissando { \hideNotes des'8 \unHideNotes }
+		    des' 8 \accent ~ des' 4 des' \accent  |
                     des' 4. \accent des' 8 \accent ~ des' 4 des' \accent  |
                     des' 4. \accent des' 8 \accent ~ des' 4 des' \accent  |
                     des' 4. \accent des' 8 \accent ~ des' 4 des' \accent  |
 %% 95
-                    < ees''' ees' > 4. \accent ( ees' 8 \accent ~ ees' 4 ) ees' \accent  |
+                    \afterGrace
+		    < ees''' ees' > 4. \accent
+		    \glissando { \hideNotes des'8 \unHideNotes }
+		    ees' 8 \accent ~ ees' 4 ees' \accent  |
                     ees' 4. \accent ees' 8 \accent ~ ees' 4 ees' \accent  |
                     ees' 4. \accent ees' 8 \accent ~ ees' 4 ees' \accent  |
                     ees' 4. \accent ees' 8 \accent ~ ees' 4 ees' \accent  |
