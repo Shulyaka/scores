@@ -1,4 +1,4 @@
-scores
+scores [![Build Status](https://travis-ci.org/Shulyaka/scores.svg?branch=master)](https://travis-ci.org/Shulyaka/scores) [![Github User](https://img.shields.io/badge/Denis-Shulyaka-brightgreen.svg)](https://github.com/Shulyaka)
 ======
 
 My lilipond scores for SATB (mostly) vocal a capella groups.
