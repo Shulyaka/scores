@@ -3,7 +3,7 @@ MAILER=echo
 
 .PHONY: all mid pdf clean clean-old import pull push refresh convert autoconvert
 
-all : mid pdf
+all : pdf
 
 mid : $(patsubst %.ly, %.mid, $(wildcard *.ly))
 
