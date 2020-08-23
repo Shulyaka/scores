@@ -1,4 +1,3 @@
-TAGNAME=$(shell git rev-parse --short HEAD)
 MAILER=echo
 
 .PHONY: all mid pdf clean clean-old import pull push refresh convert autoconvert
