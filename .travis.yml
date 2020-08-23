@@ -8,7 +8,7 @@ addons:
 before_script:
   - lilypond --version
   - for FILE in *.ly; do sed -i -e "s/tagline = \"\"/tagline = \"git revision $(git log -n 1 --pretty=format:%h -- $FILE)\"/g;" "$FILE"; done
-script: make mid pdf -j 2
+script: make mid pdf -j 4
 before_deploy:
   - mv *.{pdf,mid,midi} pages/
   - cd pages/
