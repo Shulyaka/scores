@@ -17,7 +17,7 @@ do
 #	echo "<li><a href='$FILE' title='$FILE'><em>$FILE</em><img src='$THUMBNAIL' width='85' height='120' alt='$FILE' /></a></li>" >> index.html
 done
 
-sed footer.html -e "s/\$LILYPOND_VERSION/$(lilypond --version|head -n 1)/g" -e "s/\$REVISION/$(git rev-parse --short HEAD)/g" >> index.html
+sed footer.html -e "s/\$LILYPOND_VERSION/$(lilypond --version|head -n 1)/g" -e "s/\$REVISION/$(git rev-parse --short HEAD)/g" -e "s/\$REMOTE/$(git remote get-url origin)/g" >> index.html
 
 rm -f scores.zip
 zip -T scores.zip *.{pdf,mid,midi}
