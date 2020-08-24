@@ -9,7 +9,7 @@ mid : $(patsubst %.ly, %.mid, $(wildcard *.ly))
 pdf : $(patsubst %.ly, %.pdf, $(wildcard *.ly))
 
 clean :
-	rm -f *.pdf *.mid
+	rm -f *.{pdf,mid,midi} pages/*.{pdf,mid,midi} pages/thumb/*.png pages/scores.zip pages/index.html
 
 clean-old :
 	find . \( -name \*.pdf -o -name \*.mid \) -execdir bash -c 'FILE=$$(echo {} | sed -E "s/\.pdf|\.mid\$$//" | sed -e "s/^\.\///"); if [ \! -f $$FILE.ly ]; then rm -f $$FILE.pdf $$FILE.mid; fi;' \;

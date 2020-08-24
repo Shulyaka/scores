@@ -8,16 +8,15 @@ do
 	echo "$FILE"
 	if [ "${FILE##*.}" == "pdf" ]
 	then
-		THUMBNAIL="${FILE%.pdf}.png"
-		gs -q -dBATCH -dNOPAUSE -sDEVICE=pngalpha -dMAxBitmap=500000000 -dAlignToPixles=0 -dGridFitTT=0 -g85x120 -r10.3x10.3 -sOutputFile="images/$THUMBNAIL" "$FILE" || THUMBNAIL="filetype_pdf.png"
+		THUMBNAIL="thumb/${FILE%.pdf}.png"
+		gs -q -dBATCH -dNOPAUSE -sDEVICE=pngalpha -dMAxBitmap=500000000 -dAlignToPixles=0 -dGridFitTT=0 -g85x120 -r10.3x10.3 -sOutputFile="$THUMBNAIL" "$FILE" || THUMBNAIL="images/filetype_pdf.png"
 	else
-		THUMBNAIL="filetype_${FILE##*.}.png"
+		THUMBNAIL="images/filetype_${FILE##*.}.png"
 	fi
-	sed content.html -e "s/\$FILE/$FILE/g" -e "s/\$THUMBNAIL/images\/$THUMBNAIL/g" >> index.html
-#	echo "<li><a href='$FILE' title='$FILE'><em>$FILE</em><img src='$THUMBNAIL' width='85' height='120' alt='$FILE' /></a></li>" >> index.html
+	sed content.html -e "s/\$FILE/$FILE/g" -e "s|\$THUMBNAIL|$THUMBNAIL|g" >> index.html
 done
 
-sed footer.html -e "s/\$LILYPOND_VERSION/$(lilypond --version|head -n 1)/g" -e "s/\$REVISION/$(git rev-parse --short HEAD)/g" -e "s/\$REMOTE/$(git remote get-url origin)/g" >> index.html
+sed footer.html -e "s/\$LILYPOND_VERSION/$(lilypond --version|head -n 1)/g" -e "s/\$REVISION/$(git rev-parse --short HEAD)/g" -e "s|\$REMOTE|$(git remote get-url origin)|g" >> index.html
 
 rm -f scores.zip
 zip -T scores.zip *.{pdf,mid,midi}
