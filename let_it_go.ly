@@ -399,7 +399,7 @@ globalTempo = {
                     f 2 bes 4. bes 8  |
                     < ees' g' > 1 ^\mf \accent  |
                     g' 2. g' 4  |
-                    < des'' f' > 1 \accent  |
+                    < aes' f' > 1 \accent  |
                     f' 2. f' 4  |
 %% 30
                     < ees'' g' > 1 \accent  |
@@ -579,7 +579,7 @@ globalTempo = {
                     < f' bes > 2 < bes' f' >  |
                     < bes' ees'' > 1 ^\mf \accent  |
                     < ees' bes' > 2. < ees' bes' > 4  |
-                    < des' aes' > 1 \accent  |
+                    < des' des'' > 1 \accent  |
                     < des' aes' > 2. < des' aes' > 4  |
 %% 30
                     < ees' bes' > 1 \accent  |
