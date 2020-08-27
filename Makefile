@@ -43,6 +43,7 @@ import :
 	     -pe 's/[_^-]([<>\(\)~\\])(?!markup)/\1/g;' \
 	     -pe 's/((\\.?[fp] )|(\\[<>]))/^\1/g;' \
 	     -pe 's/-" /" -- /g;' \
+	     -pe 's/_" /" __ /g;' \
 	     -pe 's/Acoustic Grand Piano/Acoustic Grand/g;' \
 	     -pe 's/^.*point.and.click.*$$//g;' \
 	     -pe 's/(\\context Voice = ".*" {)/\1\n                    \\autoBeamOff\n                    \\accidentalStyle "modern-voice-cautionary"/g' \
