@@ -226,8 +226,7 @@ globalTempo = {
                     ees' 2 d' ~  |
                     d' 2 r  |
 %% 10
-                    R1*7  |
-                    r2 r4 f'' 8 c''  |
+                    R1*8  |
                     f' 8 c' 4 g' 8 ~ g' aes' 4 c' 8  |
                     aes' 8 c' des' g' ~ g' c' 4 des' 8  |
 %% 20
@@ -344,7 +343,7 @@ globalTempo = {
                 \new Lyrics \with {alignBelowContext="track 2"} \lyricsto "voice 2" {
                     \override LyricText.self-alignment-X = #LEFT
                     \set ignoreMelismata = ##t
-                     "Doo" "doo" "doo" _ "doo," "doo" "doo" "doo" _ "doo," "'n" "doo" "doo" "doo" _ "doo" "'n" "doo" "oo." "Doo" "doo" "doo" _ "doo," "doo" "doo" "doo" _ "doo," "'n" "doo" "doo" "doo" _ "doo" "'n" "doo" "oo." _ "Doo" "doo" "Doo" "doon" "doo" _ "doo," "'n" "doo" "doo" "'n" "doo" _ "doo," "'n" "doo" "doo" "'n" "doo" _ "doo" "'n" "doo" _ "doo" _ "Don't" "let" _ "them" "in," "don't" "let" _ "them" "see." "Be" "the" "good" "girl" "you" "al" -- "ways" "have" _ "to" "be." "Con" -- "ceal," _ "don't" "feel;" "don't" "let" _ "them" "know." _ _ "I" "don't" _ "care" _ "what" "they're" "going" "to" _ "say." _ "Let" "the" "storm" "rage" _ "on." _ "Fears" "that" "con" -- "trolled" _ "me" "can't" "get" "to" "me" "at" "all." "It's" "time" _ "to" "see" _ "what" _ "I" _ "can" "do" _ _ "to" "test" _ "the" "lim" -- _ "its" _ "and" _ "break" "through." _ "No" "right," _ "no" "wrong," _ "no" _ "rules" _ "for" "me." "It's" "time" "to" "see" "what" "I" "can" "do." "No" "right," "no" "wrong," "no" "rules" "for" "me," _ "I" "am" "free." "Go," "let" "it" "go," "let" "it" "go," _ "let" "it" "go." "I" "am" "one" _ "with" "the" "wind" _ "and" "sky," _ "and" "sky." "Let" "it" "go," _ "let" "it" "go," "let" "it" "go," _ "let" "it" "go." "You'll" "nev" -- _ "er" "see" _ "me" "cry." "Oo" __ _ _ _ "here" "I" _ "stand" _ "and" "here" "I" _ "stay." _ "Ah" "ah." _ _ "Pah" "pah" "pah" "pah" "pah" "pah" "pah" "pah" "pah" "pah" "pah" "pah" "pah" "pah" "pah" "pah" "pah." "My" "pow" -- _ "er" "flur" -- _ "ries" "through" _ "the" "air" _ "in" -- "to" _ "the" "ground." _ _ _ _ _ "My" "soul" _ "is" "spi" -- _ "ral" -- "ing" _ "in" "fro" -- _ "zen" "frac" -- _ "tals" "all" _ "a" -- "round." _ _ "And" "one" _ "thought" "crys" -- _ "tal" -- "liz" -- _ "es" "like" _ "an" "i" -- _ "cy" "blast." _ _ _ _ _ "Pa" -- "a" "ah." "I'm" "nev" -- "er" "go" -- "ing" "back," "the" "past" "is" "in" "the" "past." "Let" "it" "go," "let" "it" "go." _ "And" "I'll" "rise" _ "like" "the" "break" _ "of" "dawn." _ "Let" "it" "go," _ "let" "it" "go." _ "That" "per" -- _ "fect" "girl" _ "is" "gone." "Oo" __ _ _ _ "here" "I" _ "stand" _ "in" "the" "light" "of" _ "day." _ _ "Let" "the" "storm" "rage" _ _ "on." _ _ 
+                     "Doo" "doo" "doo" _ "doo," "doo" "doo" "doo" _ "doo," "'n" "doo" "doo" "doo" _ "doo" "'n" "doo" "oo." "Doo" "doo" "doo" _ "doo," "doo" "doo" "doo" _ "doo," "'n" "doo" "doo" "doo" _ "doo" "'n" "doo" "oo." _ "Doo" "doon" "doo" _ "doo," "'n" "doo" "doo" "'n" "doo" _ "doo," "'n" "doo" "doo" "'n" "doo" _ "doo" "'n" "doo" _ "doo" _ "Don't" "let" _ "them" "in," "don't" "let" _ "them" "see." "Be" "the" "good" "girl" "you" "al" -- "ways" "have" _ "to" "be." "Con" -- "ceal," _ "don't" "feel;" "don't" "let" _ "them" "know." _ _ "I" "don't" _ "care" _ "what" "they're" "going" "to" _ "say." _ "Let" "the" "storm" "rage" _ "on." _ "Fears" "that" "con" -- "trolled" _ "me" "can't" "get" "to" "me" "at" "all." "It's" "time" _ "to" "see" _ "what" _ "I" _ "can" "do" _ _ "to" "test" _ "the" "lim" -- _ "its" _ "and" _ "break" "through." _ "No" "right," _ "no" "wrong," _ "no" _ "rules" _ "for" "me." "It's" "time" "to" "see" "what" "I" "can" "do." "No" "right," "no" "wrong," "no" "rules" "for" "me," _ "I" "am" "free." "Go," "let" "it" "go," "let" "it" "go," _ "let" "it" "go." "I" "am" "one" _ "with" "the" "wind" _ "and" "sky," _ "and" "sky." "Let" "it" "go," _ "let" "it" "go," "let" "it" "go," _ "let" "it" "go." "You'll" "nev" -- _ "er" "see" _ "me" "cry." "Oo" __ _ _ _ "here" "I" _ "stand" _ "and" "here" "I" _ "stay." _ "Ah" "ah." _ _ "Pah" "pah" "pah" "pah" "pah" "pah" "pah" "pah" "pah" "pah" "pah" "pah" "pah" "pah" "pah" "pah" "pah." "My" "pow" -- _ "er" "flur" -- _ "ries" "through" _ "the" "air" _ "in" -- "to" _ "the" "ground." _ _ _ _ _ "My" "soul" _ "is" "spi" -- _ "ral" -- "ing" _ "in" "fro" -- _ "zen" "frac" -- _ "tals" "all" _ "a" -- "round." _ _ "And" "one" _ "thought" "crys" -- _ "tal" -- "liz" -- _ "es" "like" _ "an" "i" -- _ "cy" "blast." _ _ _ _ _ "Pa" -- "a" "ah." "I'm" "nev" -- "er" "go" -- "ing" "back," "the" "past" "is" "in" "the" "past." "Let" "it" "go," "let" "it" "go." _ "And" "I'll" "rise" _ "like" "the" "break" _ "of" "dawn." _ "Let" "it" "go," _ "let" "it" "go." _ "That" "per" -- _ "fect" "girl" _ "is" "gone." "Oo" __ _ _ _ "here" "I" _ "stand" _ "in" "the" "light" "of" _ "day." _ _ "Let" "the" "storm" "rage" _ _ "on." _ _ 
                     \unset ignoreMelismata
                 } % Lyrics 1
             >> % Staff ends
@@ -397,27 +396,27 @@ globalTempo = {
                     R1  |
 %% 25
                     f' 2 ( bes' )  |
-                    < ees'' bes' > 1 ^\mf \accent  |
+                    bes' 1 ^\mf \accent  |
                     bes' 2. bes' 4  |
-                    < aes' des'' > 1 \accent  |
+                    aes' 1 \accent  |
                     aes' 2. aes' 4  |
 %% 30
-                    < ees'' bes' > 1 \accent  |
+                    bes' 1 \accent  |
                     bes' 2. bes' 4  |
                     r4 < des' f' > < f' des' > < des' f' >  |
                     < des' f' > 4 < f' des' > < des' f' > < f' des' >  |
                     < des' f' > 4 < f' des' > < des' f' > < f' des' >  |
 %% 35
                     < des' f' > 4 < f' des' > < f' des' > 8 r r4  |
-                    < c'' aes' > 4 ^\mp < aes' c'' > < c'' aes' > < aes' c'' >  |
-                    < bes' g' > 4 < g' bes' > < bes' g' > < g' bes' >  |
-                    < c'' aes' > 4 < aes' c'' > < c'' aes' > < aes' c'' >  |
-                    < des'' aes' > 4 < aes' des'' > < des'' aes' > < aes' des'' >  |
+                    < c' aes' > 4 ^\mp < aes' c' > < c' aes' > < aes' c' >  |
+                    < bes g' > 4 < g' bes > < bes g' > < g' bes >  |
+                    < c' aes' > 4 < aes' c' > < c' aes' > < aes' c' >  |
+                    < des' aes' > 4 < aes' des' > < des' aes' > < aes' des' >  |
 %% 40
-                    < c'' aes' > 4 < aes' c'' > < c'' aes' > < aes' c'' >  |
-                    < bes' g' > 4 < g' bes' > < bes' g' > < g' bes' >  |
-                    < c'' aes' > 4 < aes' c'' > < c'' aes' > < aes' c'' >  |
-                    < des'' aes' > 4 < aes' des'' > < des'' aes' > < aes' des'' >  |
+                    < c' aes' > 4 < aes' c' > < c' aes' > < aes' c' >  |
+                    < bes g' > 4 < g' bes > < bes g' > < g' bes >  |
+                    < c' aes' > 4 < aes' c' > < c' aes' > < aes' c' >  |
+                    < des' aes' > 4 < aes' des' > < des' aes' > < aes' des' >  |
                     < ees' c' > 4 < c' ees' > < ees' c' > < c' ees' >  |
 %% 45
                     < ees' g' > 4 < g' ees' > < ees' g' > < g' ees' >  |
@@ -464,12 +463,12 @@ globalTempo = {
                     ees' 2. ees' 4  |
                     f' 2. f' 4  |
                     des' 2 des'' 4 des' )  |
-                    < aes aes' > 1 ( 
+                    aes 1 ( 
                     % Предупреждение: слишком длинный такт здесь урезан |
 %% 80
-                    < ees' ees'' > 1  |
-                    < f' f'' > 1  |
-                    < des'' des' > 1 )  |
+                    ees' 1  |
+                    f' 1  |
+                    < des' aes' > 1 )  |
                     < c'' c' > 2. ^\> ces'' 4 ^\mf ~ 
                     % Предупреждение: слишком длинный такт здесь урезан |
                     ces'' 4. ces'' 8 \! ces'' ces'' ces'' 4  |
@@ -510,7 +509,7 @@ globalTempo = {
                     des' 8 aes des' 4 ) des' 8 ( aes des' 4 )  |
                     aes 4. aes 8 ~ aes 4 ees' ( ~ 
                     % Предупреждение: слишком длинный такт здесь урезан |
-                    ees' 8 bes ) < ees' g' > bes < ees' g' > 4 < g' ees' > 8 < ees' g' >  |
+                    ees' 8 ~ < bes ees' > ) < ees' g' > < bes g' > < ees' g' > 4 < g' ees' > 8 < ees' g' >  |
                     f' 4 ( c' 8 ) f' ( ~ f' ees' ) des' 4 ~  |
 %% 115
                     des' 4 r des' 8 ^\mp ^\< des' des' des' 
@@ -615,9 +614,9 @@ globalTempo = {
                     < aes aes' > 1 ( 
                     % Предупреждение: слишком длинный такт здесь урезан |
 %% 45
-                    < ees' ees'' > 1  |
-                    < f' f'' > 1  |
-                    < des'' des' > 1 )  |
+                    < ees' g' > 1  |
+                    f' 1  |
+                    < aes' des' > 1 )  |
                     < c'' c' > 1  |
                     < ces'' ces' > 2. \accent < ces'' ces' > 4  |
 %% 50
@@ -755,12 +754,12 @@ globalTempo = {
                     r2  |
                     R1*3  |
 %% 10
-                    c'' 1 ( 
+                    c' 1 ( 
                     % Предупреждение: слишком длинный такт здесь урезан |
-                    f'' 1  |
-                    ees'' 1  |
-                    bes' 1 )  |
-                    c'' 1 ( 
+                    f' 1  |
+                    ees' 1  |
+                    bes 1 )  |
+                    c' 1 ( 
                     % Предупреждение: слишком длинный такт здесь урезан |
 %% 15
                     f' 1  |
