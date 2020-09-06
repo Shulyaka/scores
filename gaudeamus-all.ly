@@ -67,7 +67,7 @@ gis' 8.  a' 16  b' 4 gis'  |
 a' 8. ( [ c'' 16 ) ] a' 2  |
                     
 % absTime = 23040 barStart = 23040
-gis' 8. ^\pp \<  a' 16  b' 4 b'  |
+gis' 8. ^\pp ^\<  a' 16  b' 4 b'  |
 %% 10
                     
 % absTime = 25920 barStart = 25920
@@ -141,7 +141,7 @@ e' 8.  e' 16  e' 4 e'  |
 e' 4 e' 2  |
                     
 % absTime = 23040 barStart = 23040
-gis' 8. ^\pp \<  gis' 16  gis' 4 gis'  |
+gis' 8. ^\pp ^\<  gis' 16  gis' 4 gis'  |
 %% 10
                     
 % absTime = 25920 barStart = 25920
@@ -215,7 +215,7 @@ b, 8.  b, 16  b, 4 b,  |
 c 4 c 2  |
                     
 % absTime = 23040 barStart = 23040
-e 8. ^\pp \<  e 16  e 4 e  |
+e 8. ^\pp ^\<  e 16  e 4 e  |
 %% 10
                     
 % absTime = 25920 barStart = 25920

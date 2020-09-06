@@ -397,9 +397,9 @@ globalTempo = {
                     f' 8 ^\< g' e' g'  |
                     d' 8 g' c' 4  |
                     r8 \! f'4^- ^\f ^\< ^~ < b_- f' > 8 ~  |
-                    < b f' > 2  |
+                    < b f' > 2 \! |
 %% 140
-                    R2*2 \! |
+                    R2*2  |
                     d' 8 e' f' a'  |
                     g' 4 g'  |
                     g' 4 r  |
@@ -607,11 +607,11 @@ globalTempo = {
 %% 135
                     a 4 ^\mf ^\< g 
                     % warning: overlong bar truncated here |
-                    g 4 c'  |
-                    R2 \!  |
-                    r8 g4_- ^\f ^\< ~ < g d'^- > 8|
+                    g 4 c' \! |
+                    R2  |
+                    r8 g4_- ^\f ^\< ~ < g d'^- > 8 \! |
 %% 140
-                    R2 \! |
+                    R2 |
                     e 8 f g a  |
                     d 4 d  |
                     b 8 c' d' f'  |

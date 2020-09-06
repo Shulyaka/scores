@@ -1272,7 +1272,4 @@ short-indent = 1.5\cm
         \context { \Staff \RemoveEmptyStaves }
         \context { \GrandStaff \accepts "Lyrics" }
     }
-%     uncomment to enable generating midi file from the lilypond source
-         \midi {
-         }
 } % score
