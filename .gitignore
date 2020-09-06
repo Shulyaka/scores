@@ -5,5 +5,5 @@
 *.log
 *~
 pages/index.html
-pages/scores.zip
+pages/*.zip
 pages/thumb/*.png
