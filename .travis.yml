@@ -10,7 +10,7 @@ before_script:
   - for FILE in *.ly; do sed -i -e "s/tagline = \(\"\"\|##f\)/tagline = \"git revision $(git log -n 1 --pretty=format:%h -- $FILE)\"/g;" "$FILE"; done
 script: make pdf mid LPFLAGS="-djob-count=2 -dcheck-internal-types -dwarning-as-error" -j 2
 before_deploy:
-  - mv *.{pdf,mid,midi} gh-pages/
+  - mv *.+(pdf|mid|midi) gh-pages/
   - cd gh-pages/
   - ./rebuild_index.sh
 deploy:
