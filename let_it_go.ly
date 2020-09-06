@@ -274,8 +274,7 @@ globalTempo = {
                     aes 8 ( des' ) ees' g' aes' ^\f r \! r4  |
                     < ees' aes' > 8 < ees' aes' > < ees' aes' > < ees' aes' > r < aes' ees' > < aes' ees' > g' ~  |
                     g' 8 < ees' g' > < g' ees' > < ees' g' > r < des'' g' > < des'' g' > < c'' aes' > ~  |
-                    << { \voiceTwo aes' 8 aes' aes' aes'  ~ aes' \! ^\f aes' 4 ees' 8 ~ | ees' 8 ees' 4 ees' 8 } \new Voice {\voiceOne c''2 ~ c''8 c'' 4 des'' 8 ~ | des'' 2} >> \oneVoice
-%                    < c'' aes' > 8 < c'' aes' > < c'' aes' > < c'' aes' > ~ < c'' aes' > < c'' aes' > 4 < ees' des'' > 8 ~  |
+                    << { \voiceTwo aes' 8 aes' aes' aes'  ~ aes' aes' 4 ees' 8 ~ | ees' 8 ees' 4 ees' 8 } \new Voice {\voiceOne c''2 ~ c''8 c'' 4 des'' 8 ~ | des'' 2} >> \oneVoice
                     r 8 < des'' f' > < des'' f' > 
 %% 75
                     << { \voiceTwo ees' ~  | ees' 8 ees' ees' ees' } \new Voice {\voiceOne c'' ~  | c'' 2 } >> \oneVoice
