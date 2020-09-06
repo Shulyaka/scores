@@ -1,0 +1,7 @@
+# Avoid deploying the below files
+.gitignore
+*/.gitkeep
+header.html
+content.html
+footer.html
+rebuild_index.sh
