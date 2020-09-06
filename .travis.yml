@@ -10,13 +10,13 @@ before_script:
   - for FILE in *.ly; do sed -i -e "s/tagline = \(\"\"\|##f\)/tagline = \"git revision $(git log -n 1 --pretty=format:%h -- $FILE)\"/g;" "$FILE"; done
 script: make mid pdf -j 2
 before_deploy:
-  - mv *.{pdf,mid,midi} pages/
-  - cd pages/
+  - mv *.{pdf,mid,midi} gh-pages/
+  - cd gh-pages/
   - ./rebuild_index.sh
 deploy:
   provider: pages
   skip_cleanup: true
   token: $GITHUB_TOKEN
-  local_dir: pages
+  local_dir: gh-pages
   on:
     branch: master

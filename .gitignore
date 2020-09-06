@@ -4,6 +4,6 @@
 *.mid
 *.log
 *~
-pages/index.html
-pages/*.zip
-pages/thumb/*.png
+gh-pages/index.html
+gh-pages/*.zip
+gh-pages/thumb/*.png
