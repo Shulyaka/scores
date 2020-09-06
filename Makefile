@@ -1,22 +1,17 @@
 MAILER=echo
 
-.PHONY: all mid pdf clean clean-old import pull push refresh convert autoconvert
-
-all : pdf
-
-mid : $(patsubst %.ly, %.mid, $(wildcard *.ly))
+.PHONY: pdf mid clean import convert autoconvert
 
 pdf : $(patsubst %.ly, %.pdf, $(wildcard *.ly))
 
-clean :
-	rm -f *.{pdf,mid,midi} pages/*.{pdf,mid,midi} pages/thumb/*.png pages/scores.zip pages/index.html
+mid : $(patsubst %.ly, %.mid, $(wildcard *.ly))
 
-clean-old :
-	find . \( -name \*.pdf -o -name \*.mid \) -execdir bash -c 'FILE=$$(echo {} | sed -E "s/\.pdf|\.mid\$$//" | sed -e "s/^\.\///"); if [ \! -f $$FILE.ly ]; then rm -f $$FILE.pdf $$FILE.mid; fi;' \;
+clean :
+	rm -f *.{pdf,mid,midi} gh-pages/*.{pdf,mid,midi} gh-pages/thumb/*.png gh-pages/scores.zip gh-pages/index.html
 
 %.pdf : %.ly
 	@echo Processing file $<
-	LANG=en_US lilypond -dno-point-and-click -o `echo $< | sed 's/\.ly//g'` $<
+	LANG=en_US lilypond -dno-point-and-click -dmidi-extension=mid $(LPFLAGS) -o `echo $< | sed 's/\.ly//g'` $<
 
 %.mid : %.ly
 	@echo Processing file $<
@@ -24,12 +19,12 @@ clean-old :
 		echo already have mid ;\
 		sed -e "s/\\\\header/\\\\include \"articulate.ly\"\n\\\\header/" \
 		    -e "s/<< % common/\\\\articulate << % common/" \
-		    $< | LANG=en_US lilypond -dmidi-extension=mid -dno-print-pages -o `echo $< | sed 's/\.ly//g'` - ;\
+		    $< | LANG=en_US lilypond -dmidi-extension=mid -dno-print-pages $(LPFLAGS) -o `echo $< | sed 's/\.ly//g'` - ;\
 	else \
 		sed -e "s/\\\\header/\\\\include \"articulate.ly\"\n\\\\header/" \
 		    -e "s/<< % common/\\\\articulate << % common/" \
 		    -e "s/^} % score/\\\\midi {}\n} % score/" \
-		    $< | LANG=en_US lilypond -dmidi-extension=mid -dno-print-pages -o `echo $< | sed 's/\.ly//g'` - ;\
+		    $< | LANG=en_US lilypond -dmidi-extension=mid -dno-print-pages $(LPFLAGS) -o `echo $< | sed 's/\.ly//g'` - ;\
 	fi
 
 import :
@@ -55,14 +50,6 @@ import :
 	#git commit `echo $(FILE) | sed -e 's/.*\///'` -m "Imported file `echo $(FILE) | sed -e 's/.*\///'` (auto)"
 	@echo "File `echo $(FILE) | sed -e 's/.*\///'` imported."
 
-pull :
-	git pull
-
-push :
-	git push
-
-refresh : pull clean-old all
-
 convert :
 	convert-ly -d -e *.ly
 	rm -f *.ly~
@@ -79,4 +66,3 @@ autoconvert :
 	else \
 		${MAILER} "Nothing to convert for lilypond version `convert-ly --version`" ;\
 	fi
-
