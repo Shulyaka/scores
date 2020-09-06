@@ -18,11 +18,15 @@ clean :
 	@if [ `grep -c -e '^[^%]*\\\\midi' $<` -gt 0 ]; then \
 		echo already have mid ;\
 		sed -e "s/\\\\header/\\\\include \"articulate.ly\"\n\\\\header/" \
-		    -e "s/<< % common/\\\\articulate << % common/" \
+		    -e "s/\\\\score {/\\\\score { \\\\unfoldRepeats \\\\articulate/" \
+		    -e "s/\\\\new Lyrics/%{ \\\\new Lyrics/" \
+		    -e "s/} % Lyrics/} %} % Lyrics/" \
 		    $< | LANG=en_US lilypond -dmidi-extension=mid -dno-print-pages $(LPFLAGS) -o `echo $< | sed 's/\.ly//g'` - ;\
 	else \
 		sed -e "s/\\\\header/\\\\include \"articulate.ly\"\n\\\\header/" \
-		    -e "s/<< % common/\\\\articulate << % common/" \
+		    -e "s/\\\\score {/\\\\score { \\\\unfoldRepeats \\\\articulate/" \
+		    -e "s/\\\\new Lyrics/%{ \\\\new Lyrics/" \
+		    -e "s/} % Lyrics/} %} % Lyrics/" \
 		    -e "s/^} % score/\\\\midi {}\n} % score/" \
 		    $< | LANG=en_US lilypond -dmidi-extension=mid -dno-print-pages $(LPFLAGS) -o `echo $< | sed 's/\.ly//g'` - ;\
 	fi
