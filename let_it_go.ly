@@ -256,9 +256,9 @@ globalTempo = {
 %% 50
                     R1*10  |
 %% 60
-                    r2 r8 < f' f > ^\mp ^\< < bes' bes > < ees'' ees' > 
+                    r2 r8 f ^\mp ^\< bes ees'  
                     % Предупреждение: слишком длинный такт здесь урезан |
-                    < d'' d' > 8 ( < bes' bes > ) < f' f > < ees' ees'' > < d' d'' > < f' f'' > < d' d'' > < bes bes' >  |
+                    d' 8 ( bes  ) f ees' d' f' d' bes |
                     ees' 4 ^\mf \! bes 8 ees' ~ ees' bes 4 bes 8 ~  |
                     bes 8 bes ( ees' ) f' ~ f' ees' 4 aes 8 ( ~ 
                     % Предупреждение: слишком длинный такт здесь урезан |
@@ -269,18 +269,21 @@ globalTempo = {
                     bes 8 bes ( ees' ) f' ~ f' ees' bes 4  |
                     r8 des' \ppp ^\< aes des' ees' des' ees' g' 
                     % Предупреждение: слишком длинный такт здесь урезан |
-                    aes' 8 < des'' des' > < aes' aes > < des'' des' > < ees'' ees' > < des'' des' > < ees'' ees' > < g g' >  |
+                    aes' 8 des' aes des' ees' des' ees' g |
 %% 70
-                    < aes aes' > 8 ( des' ) ees' g' aes' ^\f r \! r4  |
+                    aes 8 ( des' ) ees' g' aes' ^\f r \! r4  |
                     < ees' aes' > 8 < ees' aes' > < ees' aes' > < ees' aes' > r < aes' ees' > < aes' ees' > g' ~  |
                     g' 8 < ees' g' > < g' ees' > < ees' g' > r < des'' g' > < des'' g' > < c'' aes' > ~  |
-                    < c'' aes' > 8 < c'' aes' > < c'' aes' > < c'' aes' > ~ < c'' aes' > < c'' aes' > 4 < ees' des'' > 8 ~  |
-                    < ees' des'' > 8 < ees' des'' > 4 < ees' des'' > 8 r < des'' f' > < des'' f' > < ees' c'' > ~  |
+                    << { \voiceTwo aes' 8 aes' aes' aes'  ~ aes' \! ^\f aes' 4 ees' 8 ~ | ees' 8 ees' 4 ees' 8 } \new Voice {\voiceOne c''2 ~ c''8 c'' 4 des'' 8 ~ | des'' 2} >> \oneVoice
+%                    < c'' aes' > 8 < c'' aes' > < c'' aes' > < c'' aes' > ~ < c'' aes' > < c'' aes' > 4 < ees' des'' > 8 ~  |
+                    r 8 < des'' f' > < des'' f' > 
 %% 75
-                    < ees' c'' > 8 < ees' c'' > < c'' ees' > < ees' c'' > r < aes' ees' > < aes' ees' > g' ~  |
+                    << { \voiceTwo ees' ~  | ees' 8 ees' ees' ees' } \new Voice {\voiceOne c'' ~  | c'' 2 } >> \oneVoice
+%                    < ees' c'' > 8 < ees' c'' > < c'' ees' > < ees' c'' >
+                    r 8 < aes' ees' > < aes' ees' > g' ~  |
                     g' 8 < ees' g' > < g' ees' > < ees' g' > r4 f' 8 aes' ~  |
                     aes' 8 aes' 4 aes' 8 ~ aes' 4 aes'  |
-                    f' 2. aes' 16 bes' c'' des''  |
+                    f' 2. aes' 16 [ ( bes' c'' des'' ] ) |
                     < c'' aes' > 4. < aes' ees' > 8 ~ < aes' ees' > 4 < g' ees' > ~  |
 %% 80
                     < g' ees' > 2. < ees' bes' > 4  |
@@ -294,45 +297,47 @@ globalTempo = {
                     fes' 8 ges' aes' f' ges' aes' r4  |
                     r4 < des' aes > 8 ^\mp < c' aes > ~ < c' aes > < des' aes > 4 < ces' aes > 8 ~  |
                     < ces' aes > 8 < des' aes > 4 < aes des' > 8 ~ < aes des' > < des' aes > 4 < ces' aes > 8 ~  |
-                    < ces' aes > 8 < des' aes > 4 < des' aes > 8 ~ < des' aes > < des' aes > 4 < aes ces' > 8 ( ^\< ~ 
+                    < ces' aes > 8 < des' aes > 4 < des' aes > 8 ~ < des' aes > < des' aes > 4 < aes ces' > 8 ( ^\f ^\< ~ 
                     % Предупреждение: слишком длинный такт здесь урезан |
 %% 90
-                    < aes ces' > 8 ^\f ~ < aes c' > 4 ~ < aes des' > 8 ~ < aes des' > 4 ~ < aes' aes > ^\ff )  |
-                    r4 \! < aes des' > 8 ^\mp < aes c' > ~ < aes c' > < aes des' > 4 < aes ces' > 8 ~  |
+                    < aes ces' > 8 ~ < aes c' > 4 ~ < aes des' > 8 ~ < aes des' > 4 ~ < aes' aes > \! ^\ff )  |
+                    r4 < aes des' > 8 ^\mp < aes c' > ~ < aes c' > < aes des' > 4 < aes ces' > 8 ~  |
                     < aes ces' > 8 < aes des' > 4 < des' aes > 8 ~ < des' aes > < aes des' > 4 < aes ces' > 8 ~  |
-                    < aes ces' > 8 < aes des' > 4 < aes c' > 8 ~ < aes c' > < aes des' > 4 < ces' aes > 8 ( ^\< ~ 
+                    < aes ces' > 8 < aes des' > 4 < aes c' > 8 ~ < aes c' > < aes des' > 4 < ces' aes > 8 ( ^\f ^\< ~ 
                     % Предупреждение: слишком длинный такт здесь урезан |
-                    < ces' aes > 8 < c' aes > 4 ^\f < aes des' > 8 ~ < aes des' > 4 ~ < aes' aes > ^\ff )  |
+                    < ces' aes > 8 < c' aes > 4 < aes des' > 8 ~ < aes des' > 4 ~ < aes' aes > \! ^\ff )  |
 %% 95
-                    r4 \! < bes ees' > 8 ^\mf < bes d' > ~ < bes d' > < bes ees' > 4 < bes des' > 8 ~  |
+                    r4 < bes ees' > 8 ^\mf < bes d' > ~ < bes d' > < bes ees' > 4 < bes des' > 8 ~  |
                     < bes des' > 8 < bes ees' > 4 < ees' bes > 8 ~ < ees' bes > < bes ees' > 4 < bes d' > 8 ~  |
-                    < bes d' > 8 < bes ees' > 4 < bes ees' > 8 ~ < bes ees' > < bes ees' > 4 < bes des' > 8 ^\< ~ 
+                    < bes d' > 8 < bes ees' > 4 < bes ees' > 8 ~ < bes ees' > < bes ees' > 4 < bes des' > 8  ^\f ^\< ~ 
                     % Предупреждение: слишком длинный такт здесь урезан |
-                    < bes des' > 8 ~ < bes d' > 4 ^\f ~ < bes ees' > 8 ~ < bes ees' > 4 ~ < bes' bes > ^\ff  |
-                    < a' c' > 1 \accent \! ( ^\> 
+                    < bes des' > 8 ~ < bes d' > 4~ < bes ees' > 8 ~ < bes ees' > 4 ~ < bes' bes > \! ^\ff  |
+                    < a' c' > 1 \accent ( ^\> 
                     % Предупреждение: слишком длинный такт здесь урезан |
 %% 100
                     < c' aes > 1 ^\mp \!  |
                     < ees' g' > 4 ) < g' ees' > ^\mf ^\< < ees' g' > < g' ees' > 
                     % Предупреждение: слишком длинный такт здесь урезан |
-                    < bes' des'' > 4 < des'' bes' > < bes' des'' > < des'' bes' >  |
-                    < des'' aes' > 8 < aes' des'' > < aes' des'' > < aes' des'' > < aes' des'' > ^\f \! r < f' aes' > < aes' f' >  |
+                    < bes' f' > 4 < f' bes' > < bes' f' > < f' bes' >  |
+%                    < des'' aes' > 8 < aes' des'' > < aes' des'' > < aes' des'' > < aes' des'' > ^\f \! r < f' aes' > < aes' f' >  |
+                    << { \voiceTwo aes' 8 aes' aes' aes' aes' \! ^\f } \new Voice = "sopI103" {\voiceOne des''2 ~ des''8 } >> \oneVoice r < f' aes' > < aes' f' >  |
                     < aes' ees' > 2 r8 < aes' ees' > < aes' ees' > g' ~  |
 %% 105
-                    g' 2 r8 < des'' g' > < des'' g' > < c'' aes' > ~  |
-                    < c'' aes' > 8 < c'' aes' > < c'' aes' > < c'' aes' > ~ < c'' aes' > < c'' aes' > 4 < des'' ees' > 8 ~  |
+                    g' 2 r8 < des'' g' > < des'' g' > 
+                    << { \voiceTwo aes' ~  | aes' 8 aes' aes' aes' aes' } \new Voice {\voiceOne c'' ~  | c'' 2 ~ c'' 8 } >> \oneVoice
+                    < c'' aes' > 4 < des'' ees' > 8 ~  |
                     < des'' ees' > 2 r8 < des'' f' > < des'' f' > < c'' ees' > ~  |
                     < c'' ees' > 2 r8 < aes' ees' > < aes' ees' > g' ~  |
                     g' 2 r4 f' 8 aes' ~  |
 %% 110
                     aes' 8 aes' 4 aes' 8 ~ aes' 4 aes'  |
-                    f' 2. aes' 16 bes' c'' des''  |
+                    f' 2. aes' 16 [ bes' c'' des'' ] |
                     < c'' aes' > 4. < aes' ees' > 8 ~ < aes' ees' > 4 < g' ees' > ~  |
                     < g' ees' > 2 < ees' aes' > 4 < ees' aes' >  |
                     < aes' f' > 4. < aes' f' > 8 ~ < aes' f' > 4 < des' f' > ~  |
 %% 115
                     < f' des' > 1 ~  |
-                    < des' f' > 8 r r4 r < fes' des' > 8 < fes' des' >  |
+                    < des' f' > 8 r r2 < fes' des' > 8 < fes' des' >  |
                     < c' ees' > 4. < ees' c' > 8 ( ~ < ees' c' > ~ < ees' aes > ) < ges' ees' > 4 ~  |
                     < ges' ees' > 1 ~  |
                     < ges' ees' > 2. r4  |
@@ -346,6 +351,7 @@ globalTempo = {
                      "Doo" "doo" "doo" _ "doo," "doo" "doo" "doo" _ "doo," "'n" "doo" "doo" "doo" _ "doo" "'n" "doo" "oo." "Doo" "doo" "doo" _ "doo," "doo" "doo" "doo" _ "doo," "'n" "doo" "doo" "doo" _ "doo" "'n" "doo" "oo." _ "Doo" "doon" "doo" _ "doo," "'n" "doo" "doo" "'n" "doo" _ "doo," "'n" "doo" "doo" "'n" "doo" _ "doo" "'n" "doo" _ "doo" _ "Don't" "let" _ "them" "in," "don't" "let" _ "them" "see." "Be" "the" "good" "girl" "you" "al" -- "ways" "have" _ "to" "be." "Con" -- "ceal," _ "don't" "feel;" "don't" "let" _ "them" "know." _ _ "I" "don't" _ "care" _ "what" "they're" "going" "to" _ "say." _ "Let" "the" "storm" "rage" _ "on." _ "Fears" "that" "con" -- "trolled" _ "me" "can't" "get" "to" "me" "at" "all." "It's" "time" _ "to" "see" _ "what" _ "I" _ "can" "do" _ _ "to" "test" _ "the" "lim" -- _ "its" _ "and" _ "break" "through." _ "No" "right," _ "no" "wrong," _ "no" _ "rules" _ "for" "me." "It's" "time" "to" "see" "what" "I" "can" "do." "No" "right," "no" "wrong," "no" "rules" "for" "me," _ "I" "am" "free." "Go," "let" "it" "go," "let" "it" "go," _ "let" "it" "go." "I" "am" "one" _ "with" "the" "wind" _ "and" "sky," _ "and" "sky." "Let" "it" "go," _ "let" "it" "go," "let" "it" "go," _ "let" "it" "go." "You'll" "nev" -- _ "er" "see" _ "me" "cry." "Oo" __ _ _ _ "here" "I" _ "stand" _ "and" "here" "I" _ "stay." _ "Ah" "ah." _ _ "Pah" "pah" "pah" "pah" "pah" "pah" "pah" "pah" "pah" "pah" "pah" "pah" "pah" "pah" "pah" "pah" "pah." "My" "pow" -- _ "er" "flur" -- _ "ries" "through" _ "the" "air" _ "in" -- "to" _ "the" "ground." _ _ _ _ _ "My" "soul" _ "is" "spi" -- _ "ral" -- "ing" _ "in" "fro" -- _ "zen" "frac" -- _ "tals" "all" _ "a" -- "round." _ _ "And" "one" _ "thought" "crys" -- _ "tal" -- "liz" -- _ "es" "like" _ "an" "i" -- _ "cy" "blast." _ _ _ _ _ "Pa" -- "a" "ah." "I'm" "nev" -- "er" "go" -- "ing" "back," "the" "past" "is" "in" "the" "past." "Let" "it" "go," "let" "it" "go." _ "And" "I'll" "rise" _ "like" "the" "break" _ "of" "dawn." _ "Let" "it" "go," _ "let" "it" "go." _ "That" "per" -- _ "fect" "girl" _ "is" "gone." "Oo" __ _ _ _ "here" "I" _ "stand" _ "in" "the" "light" "of" _ "day." _ _ "Let" "the" "storm" "rage" _ _ "on." _ _ 
                     \unset ignoreMelismata
                 } % Lyrics 1
+                \new Lyrics \with { alignAboveContext = "track 2" } \lyricsto "sopI103" { "past." }
             >> % Staff ends
 
             \context Staff = "track 3" << 
@@ -390,8 +396,8 @@ globalTempo = {
                     f' 2 f'  |
 %% 20
                     g' 2 ees' )  |
-                    des' 8 ees' f' g' aes' bes' c'' des''  |
-                    < c'' aes' > 2 \accent ~ < c'' aes' > 4. < bes' g' > 8 \accent ~  |
+                    des' 8 ( [ ees' f' g' ] aes' [ bes' c'' des'' ] |
+                    < c'' aes' > 2 ) \accent ~ < c'' aes' > 4. < bes' g' > 8 \accent ~  |
                     < bes' g' > 1  |
                     R1  |
 %% 25
@@ -575,11 +581,11 @@ globalTempo = {
                     < des' aes' > 1  |
                     < ees' bes' > 1  |
                     < bes f' > 1 )  |
-                    < f' c'' > 2 ^\mp ( < f' c'' > 
+                    < f' c'' > 2 ^\mp ^( < f' c'' > 
                     % Предупреждение: слишком длинный такт здесь урезан |
                     < des' aes' > 2 < des' aes' >  |
 %% 20
-                    < ees' bes' > 2 << { bes' 2 } \\ { \autoBeamOff g 8 aes bes c' } >>  |
+                    < ees' bes' > 2 << { bes' 2 } \\ { \autoBeamOff g 8 [ aes bes c' ] } >>  |
                     % < g bes' > 8 ~ < aes bes' > ~ < bes bes' > ~ < c' bes' >  |
                     < f' bes' > 1 )  |
                     < c' f' > 2 \accent ~ < c' f' > 4. < ees' bes > 8 \accent ~  |
@@ -687,7 +693,7 @@ globalTempo = {
                     des' 1 ^\mp \!  |
                     < ees' bes > 4 ) < ees' bes > ^\mf ^\< < ees' bes > < ees' bes > 
                     % Предупреждение: слишком длинный такт здесь урезан |
-                    < bes f' > 4 < bes f' > < bes f' > < bes f' >  |
+                    < bes des' > 4 < bes des' > < bes des' > < bes des' >  |
                     < des' f' > 8 < des' f' > < des' f' > < des' f' > \afterGrace < des' f' > ^\f \! \glissando { \hideNotes aes'16 \glissando \unHideNotes }
                     \override Voice.NoteHead.style = #'cross
                     des8
