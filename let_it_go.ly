@@ -383,15 +383,15 @@ globalTempo = {
                     r4 bes ~ bes 2  |
                     R1*2  |
 %% 10
-                    aes' 1  |
+                    aes' 1 ( |
                     f' 1  |
                     g' 1  |
-                    ees' 2 ( des' )  |
-                    aes' 1  |
+                    ees' 2 des' )  |
+                    aes' 1 ( |
 %% 15
                     f' 1  |
                     g' 1  |
-                    ees' 2 ( d' )  |
+                    ees' 2 d' )  |
                     aes' 2 ^\mp ( aes' 
                     % Предупреждение: слишком длинный такт здесь урезан |
                     f' 2 f'  |
@@ -440,7 +440,7 @@ globalTempo = {
 %% 55
                     aes' 4 r8 aes' < des'' aes' > \accent aes' < aes' des'' > \accent < c'' aes' > \accent ( 
                     % Предупреждение: слишком длинный такт здесь урезан |
-                    bes' 1 ~  |
+                    bes' 1 ~   |
                     bes' 4 ) r8 f' < bes' f' > \accent f' < bes' f' > \accent < c'' f' > \accent ~  |
                     < f' c'' > 1 ( 
                     % Предупреждение: слишком длинный такт здесь урезан |
@@ -617,7 +617,7 @@ globalTempo = {
                     aes' 2. aes' 8 bes'  |
                     ees' 2. ees' 4  |
                     f' 2. f' 4  |
-                    des' 2 des'' 4 des' )  |
+                    des' 2 aes' 4 des' )  |
                     < aes aes' > 1 ( 
                     % Предупреждение: слишком длинный такт здесь урезан |
 %% 45
@@ -824,7 +824,7 @@ globalTempo = {
                     % Предупреждение: слишком длинный такт здесь урезан |
                     bes' 1  |
                     aes' 2 ~ aes' 8 g' aes' ees'' ~  |
-                    ees'' 2. ) des'' 16 ( c'' bes' c'' 
+                    ees'' 2. ) des'' 16 [ ( c'' bes' c'' ]
                     % Предупреждение: слишком длинный такт здесь урезан |
 %% 75
                     aes' 2 ~ aes' 8 bes' c'' bes'  |
