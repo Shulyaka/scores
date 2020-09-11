@@ -695,11 +695,7 @@ globalTempo = {
                     < ees' bes > 4 ) < ees' bes > ^\mf ^\< < ees' bes > < ees' bes > 
                     % Предупреждение: слишком длинный такт здесь урезан |
                     < bes des' > 4 < bes des' > < bes des' > < bes des' >  |
-                    < des' f' > 8 < des' f' > < des' f' > < des' f' > \afterGrace < des' f' > ^\f \! \glissando { \hideNotes aes'16 \glissando \unHideNotes }
-                    \override Voice.NoteHead.style = #'cross
-                    des8
-                    \override Voice.NoteHead.style = #'default
-                    des' des'  |
+                    < des' f' > 8 < des' f' > < des' f' > < des' f' > < des' f' > ^\f \! r des' des'  |
                     < aes c' > 2 r8 < aes c' > < c' aes > ees' ~  |
 %% 105
                     ees' 2 r8 ees' f' f' ~  |
