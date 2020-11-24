@@ -19,13 +19,15 @@ clean :
 		echo already have mid ;\
 		sed -e "s/\\\\header/\\\\include \"articulate.ly\"\n\\\\header/" \
 		    -e "s/\\\\score {/\\\\score { \\\\unfoldRepeats \\\\articulate/" \
-		    -e "s/\\\\new Lyrics\(.*\){$$/%{ \\\\new Lyrics\1{/" \
+		    -e "s/\\\\new Lyrics\(.*{\)$$/%{ \\\\new Lyrics\1/" \
+		    -e "s/\\\\new Lyrics\(.*[^{]\)$$/% \\\\new Lyrics\1/" \
 		    -e "s/} % Lyrics/} %} % Lyrics/" \
 		    $< | LANG=en_US lilypond -dmidi-extension=mid -dno-print-pages $(LPFLAGS) -o `echo $< | sed 's/\.ly//g'` - ;\
 	else \
 		sed -e "s/\\\\header/\\\\include \"articulate.ly\"\n\\\\header/" \
 		    -e "s/\\\\score {/\\\\score { \\\\unfoldRepeats \\\\articulate/" \
-		    -e "s/\\\\new Lyrics\(.*\){$$/%{ \\\\new Lyrics\1{/" \
+		    -e "s/\\\\new Lyrics\(.*{\)$$/%{ \\\\new Lyrics\1/" \
+		    -e "s/\\\\new Lyrics\(.*[^{]\)$$/% \\\\new Lyrics\1/" \
 		    -e "s/} % Lyrics/} %} % Lyrics/" \
 		    -e "s/^} % score/\\\\midi {}\n} % score/" \
 		    $< | LANG=en_US lilypond -dmidi-extension=mid -dno-print-pages $(LPFLAGS) -o `echo $< | sed 's/\.ly//g'` - ;\
