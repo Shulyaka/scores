@@ -392,9 +392,9 @@ globalTempo = {
                     f' 1  |
                     g' 1  |
                     ees' 2 d' )  |
-                    aes' 2 ^\mp ( aes' 
+                    aes' 1 ^\mp ( 
                     % Предупреждение: слишком длинный такт здесь урезан |
-                    f' 2 f'  |
+                    f' 1 |
 %% 20
                     g' 2 ees' )  |
                     des' 8 ( [ ees' f' g' ] aes' [ bes' c'' des'' ] |
@@ -524,7 +524,8 @@ globalTempo = {
                     des' 8 ees' des' des' des' des' des' aes  |
                     c' 2 ^\f \! c' 8 ees' ces' 4 ~  |
                     ces' 8 ces' ces' 4 ces' 8 ces' ces' ces'  |
-                    ces' 8 ces' ces' ces' ces' ces' ces' 4  |
+                    % < ces' ees' > 8 ces' < ces' ges' > < ces' ees' > < ces' ces'' > < ces' ces'' > < ces' ces'' > 4  |
+                    << { \voiceTwo ces' 8 ces' ces' ces' ces' ces' ces' 4 } \new Voice = "sopII119" {\voiceOne \autoBeamOff ees' 8 ces' ges' ees' ces'' ces'' ces'' 4 } >> \oneVoice |
 %% 120
                     < des' aes > 1 ^\mf ~  |
                     < des' aes > 1 ~  |
@@ -537,6 +538,7 @@ globalTempo = {
                      "Doo," _ "doo," _ "doo." _ "Doo," _ "doo," _ "doo." _ "Oo" __ _ _ _ _ "Oo" __ _ _ "ah." _ "Oo" __ _ _ _ _ _ "Oo" __ _ _ _ _ _ _ _ "Oo" __ _ _ _ "Ah." _ "Dah" "dah" "dah" "dah" "dah" "dah" "dah" "dah" "dah" "con" -- "seal," "don't" "feel," "don't" "let" "them" "know." "Well," "now" "they," "now" "they" "know." "bah" "bah" "bah" "bah" "bah" "bah" "bah" "bah" "bah" "bah" "bah" "bah" "bah" "bah" "bah" "bah" "bah" "bah" "bah" "bah" "bah" "bah" "bah" "bah" "bah" "bah" "bah" "bah" "bah" "bah" "bah" "bah" "bah" "bah" "bah" "bah" "bah" "bah" "bah" "bah" "bah" "bah" "bah" "bah" "bah" "bah" "bah" "bah" "bah" "bah" "bah" "bah." "Pah" "pah" "pah" "pah" "pah." _ "Bah" -- "dah" "pah" "bah" -- "dah" _ "pah" "bah" -- "dah" "bah" -- "dah" _ "pah" "bah" -- "dah" "bah" -- "dah" _ _ "bah" -- "dah" "pah" "bah" -- "da" -- "ah" _ "bah" -- "dah" "pah" "bah" -- "dah" _ _ "bah" -- "dah" "pah" "bah" -- "dah" "Pah" _ "Ah" __ _ _ _ "Ah" __ _ _ "Ah" __ _ _ _ _ "Ah" __ _ _ _ _ _ _ _ _ _ _ _ "Ah" __ _ _ _ "Ah" "ah." _ "Pah" "pah" "pah" "pah." "Tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah." "Tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah." "Tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah" "tah." "Tah" "tah" "tah" "Pah." _ "Let" "it" "go." "And" "I" _ "will" "rise" "like" "the" "break" "of" "dawn," "like" "the" "break" _ "of" "dawn," "break" "of" "dawn." "Let" "it" "go." "That" "per" -- _ "fect" "girl" "is" _ "gone," "per" -- "fect" "girl" "is" "gone," "is" "gone," _ _ _ "gone." _ _ "Here" "I" _ "stand," _ _ "here" "I" "stand" "in" "the" "light" _ "of" _ _ "day." _ "La" "la" "la" "la" "la" "la" "la" "la" "la" "la." "Let" "the" "storm" "rage" _ "on." _ "Doo" "doo" "doo" "doo" "doo" "doo" "doo" "doo" "doo" "doo" "doo" "doo" "doo" "Hm" _ _
                     \unset ignoreMelismata
                 } % Lyrics 1
+                \new Lyrics \with { alignAboveContext = "track 3" } \lyricsto "sopII119" { _ _ _ _ "pah" -- "pah" -- "pah!" }
             >> % Staff ends
 
             \context Staff = "track 4" << 
@@ -582,9 +584,9 @@ globalTempo = {
                     < des' aes' > 1  |
                     < ees' bes' > 1  |
                     < bes f' > 1 )  |
-                    < f' c'' > 2 ^\mp ^( < f' c'' > 
+                    < f' c'' > 1 ^\mp ^( 
                     % Предупреждение: слишком длинный такт здесь урезан |
-                    < des' aes' > 2 < des' aes' >  |
+                    < des' aes' > 1 |
 %% 20
                     < ees' bes' > 2 << { bes' 2 } \\ { \autoBeamOff g 8 [ aes bes c' ] } >>  |
                     % < g bes' > 8 ~ < aes bes' > ~ < bes bes' > ~ < c' bes' >  |
@@ -823,7 +825,7 @@ globalTempo = {
                     ees'' 2. ) des'' 16 [ ( c'' bes' c'' ]
                     % Предупреждение: слишком длинный такт здесь урезан |
 %% 75
-                    aes' 2 ~ aes' 8 bes' c'' bes'  |
+                    aes' 2 ~ aes' 8 bes' c'' bes' ~ |
                     bes' 1 )  |
                     f' 2 ( ~ f' 8 g' aes' f' ~ 
                     % Предупреждение: слишком длинный такт здесь урезан |
@@ -838,8 +840,8 @@ globalTempo = {
 %% 85
                     R1*2  |
                     \afterGrace
-                    < \tweak style #'cross des''' \tweak style #'cross des' > 4. ^\ff \accent 
-                    \glissando { \hideNotes des'8 \unHideNotes }
+                    < \tweak style #'cross des''' \tweak style #'cross des' > 4. ^\ff \accent  -\tweak X-offset #3 ^\markup { "Highest pitch to lowest" } -\tweak X-offset #3 _\markup { "Whisper" }
+                    \glissando { \hideNotes des'8 \unHideNotes } 
                     \override Voice.NoteHead.style = #'cross
                     des' 8 \accent ~ des' 4 des' \accent  |
                     des' 4. \accent des' 8 \accent ~ des' 4 des' \accent  |
@@ -873,7 +875,7 @@ globalTempo = {
                     aes' 2 ~ aes' 8 g' aes' ees'' ~  |
                     ees'' 2. ) des'' 16 [ ( c'' bes' c'' ]
                     % Предупреждение: слишком длинный такт здесь урезан |
-                    aes' 2 ~ aes' 8 bes' c'' bes'  |
+                    aes' 2 ~ aes' 8 bes' c'' bes' ~ |
                     bes' 1 )  |
 %% 110
                     f' 2 ( ~ f' 8 g' aes' f' ~ 
