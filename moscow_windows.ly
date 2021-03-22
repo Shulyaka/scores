@@ -46,7 +46,7 @@ globalTempo = {
                 \new Voice \global
                 \new Voice \globalTempo
 
-                \context Voice = "voice 1" {
+                \context Voice = "voice 1" \transpose e d {
                     \autoBeamOff
                     \accidentalStyle modern-voice-cautionary
                     % Segment: Acoustic Grand
@@ -119,7 +119,7 @@ globalTempo = {
                 \new Voice \global
                 \new Voice \globalTempo
 
-                \context Voice = "voice 2" {
+                \context Voice = "voice 2" \transpose e d {
                     \autoBeamOff
                     \accidentalStyle modern-voice-cautionary
                     % Segment: Acoustic Grand
@@ -131,9 +131,9 @@ globalTempo = {
                     \clef "treble"
                     \key e \minor
                     R1  |
-                    r8 e' 4. ^\mp r8 e' ( dis' 4 )  |
+                    r8 e' 4. ^\mp r8 fis' ( fis' 4 )  |
                     cis' 4 d' dis' r  |
-                    r8 e' 4. r8 e' ( dis' 4 
+                    r8 e' 4. r8 fis' ( fis' 4 
                     % Предупреждение: слишком длинный такт здесь урезан |
 %% 5
                     f' 8 ) b 16 \staccato ^\< r d' \staccato r f' \staccato r gis' \staccato r b' \staccato \! r \fermata gis' 8 ^\mf gis'  |
@@ -192,7 +192,7 @@ globalTempo = {
                 \new Voice \global
                 \new Voice \globalTempo
 
-                \context Voice = "voice 3" {
+                \context Voice = "voice 3" \transpose e d {
                     \autoBeamOff
                     \accidentalStyle modern-voice-cautionary
                     % Segment: Acoustic Grand
@@ -204,9 +204,9 @@ globalTempo = {
                     \clef "treble"
                     \key e \minor
                     R1  |
-                    r8 c' 4. ^\mp r8 c' ( b 4 )  |
+                    r8 c' 4. ^\mp r8 e' ( dis' 4 )  |
                     b 4 ~ b ~ b r  |
-                    r8 c' 4. r8 c' ( b 4 
+                    r8 c' 4. r8 e' ( dis' 4
                     % Предупреждение: слишком длинный такт здесь урезан |
 %% 5
                     d' 8 ) a 16 \staccato ^\< r b \staccato r d' \staccato r e' \staccato r gis' \staccato \! r \fermata e' 8 ^\mf e'  |
@@ -265,7 +265,7 @@ globalTempo = {
                 \new Voice \global
                 \new Voice \globalTempo
 
-                \context Voice = "voice 4" {
+                \context Voice = "voice 4" \transpose e d {
                     \autoBeamOff
                     \accidentalStyle modern-voice-cautionary
                     % Segment: Acoustic Grand
@@ -277,9 +277,9 @@ globalTempo = {
                     \clef "treble"
                     \key e \minor
                     R1  |
-                    r8 a 4. ^\mp r8 fis ( fis 4 )  |
-                    g 4 ~ g ~ g r  |
-                    r8 a 4. r8 fis ( fis 4 
+                    r8 a 4. ^\mp r8 c' ( b 4 )  |
+                    g' 4 ~ g' ~ g' r  |
+                    r8 a 4. r8 c' ( b 4 
                     % Предупреждение: слишком длинный такт здесь урезан |
 %% 5
                     a 8 ) a 16 \staccato ^\< r a \staccato r b \staccato r d' \staccato r e' \staccato \! r \fermata d' 8 ^\mf d'  |
